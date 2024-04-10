@@ -8,9 +8,7 @@ if __name__ == "__main__":
                 flines = f.readlines()
                 task_queue = []
                 for line in flines:
-                    task = line[1:-2].strip().split(" ")
-                    if "" in task:
-                        task.remove("")
+                    task = line[1:-2].split()
                     print(task)
                     task = [float(i) for i in task]
                     task_queue.append(task)

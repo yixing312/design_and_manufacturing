@@ -6,6 +6,10 @@ import time
 from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
 
+from plan_tasks.random_task import random_task
+from plan_tasks.simulated_annealing import simulated_annealing
+from plan_tasks.gradient_descent import gradient_descent
+
 
 # 实现一个任务队列，队列中每个元素为一个六元的元组
 # 实现函数，将任务队列写入 ../data/task_queue.txt 中
@@ -72,6 +76,16 @@ def get_ansys(task):
     return concentricity
 
 
+def plan_task(Ansys_ans, Task_stack, Bounds):
+    # !随机获取一个任务，无所谓历史任务
+    task_list = random_task(Ansys_ans, Task_stack, Bounds)
+    # # !退火算法，每次迭代生成一个新任务
+    # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
+    # # !梯度下降法，每次迭代生成13个新任务
+    # task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
+    return task_list
+
+
 def print_ansys(task):
     data_path = "../data/Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
@@ -90,10 +104,8 @@ if __name__ == "__main__":
         [4, 4, 4, 4, 4, 4],
         [6, 6, 6, 6, 6, 6],
     ]
-    lower_bound = np.array(bounds[0])
-    upper_bound = np.array(bounds[1])
-    random_values = np.random.rand(len(lower_bound))
-    task_queue = [random_values * (upper_bound - lower_bound) + lower_bound]
+
+    task_queue = random_task([], [], bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
 
     print("当前任务队列：", task_queue)
@@ -109,17 +121,17 @@ if __name__ == "__main__":
             continue
         print("任务队列已经完成，规划新任务")
         for i in task_queue:
-            # ansys_ans.append(get_ansys(i))
+            ansys_ans.append(get_ansys(i))
             task_stack.append(i)
             print_queue.append(i)
 
         # 根据 ansys_ans 的结果和 task_stack 的任务
+        # TODO 任务规划算法
+        task_queue = plan_task(ansys_ans, task_stack, bounds)
 
-        # TODO 退火算法获取新的任务队列
-        task_queue = [np.random.rand(6) * (upper_bound - lower_bound) + lower_bound]
         # 写入新的任务队列
         write_task_queue(task_queue)
 
         # 此时空闲下来，完成绘图工作
-        # for i in print_queue:
-        #     print_ansys(i)
+        for i in print_queue:
+            print_ansys(i)
