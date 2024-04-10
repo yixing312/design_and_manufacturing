@@ -8,8 +8,12 @@
 - 周期汇报
 - Ansys
 - data
+  - Ansys
+    - [4 4 4 4 4 4]
+  - task_queue.txt
 - scripts
   - py端分析器
+  - Ansys端分析器
 
 ## 双端分析器执行逻辑
 

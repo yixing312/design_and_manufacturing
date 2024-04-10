@@ -61,24 +61,24 @@ def get_concentricity(data_all):
 
 
 def get_ansys(task):
-    data_path = "../data/" + str(task)
+    data_path = "../data/Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
         data = get_data_list(os.path.join(data_path, file))
-        data_all[file[:-4]] = data
+        data_all[file[-6:-4]] = data
         print("读取文件：", file, "成功！")
     concentricity = get_concentricity(data_all)
     return concentricity
 
 
 def print_ansys(task):
-    data_path = "../data/" + str(task)
+    data_path = "../data/Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
         data = get_data_list(os.path.join(data_path, file))
-        data_all[file[:-4]] = data
+        data_all[file[-6:-4]] = data
         print("读取文件：", file, "成功！")
     print_all(data_all)
     plt.savefig(data_path + "/output.png")
