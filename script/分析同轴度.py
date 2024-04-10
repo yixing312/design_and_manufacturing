@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
 from get_data import get_data_list  # 读取文件并输出位列表
+
 # from get_data import get_data_dict  # 读取文件并输出为以首行为键的字典
 
 
@@ -91,8 +92,9 @@ def print_side(ax, data_all):
     x1 = [float(data_all["1x"][i][2]) for i in range(len(data_all["1x"]))]
     z1 = [float(data_all["1x"][i][4]) for i in range(len(data_all["1x"]))]
     dx1 = [float(data_all["1x"][i][-1]) for i in range(len(data_all["1x"]))]
+    dz1 = [float(data_all["1y"][i][-1]) for i in range(len(data_all["1y"]))]
     x1 = np.array(x1) + np.array(dx1)
-    z1 = np.array(z1)
+    z1 = np.array(z1) + np.array(dz1)
     points = np.column_stack((x1, z1))
     hull = ConvexHull(points)
     hull_points = points[hull.vertices]
@@ -101,8 +103,9 @@ def print_side(ax, data_all):
     x2 = [float(data_all["2x"][i][2]) for i in range(len(data_all["2x"]))]
     z2 = [float(data_all["2x"][i][4]) for i in range(len(data_all["2x"]))]
     dx2 = [float(data_all["2x"][i][-1]) for i in range(len(data_all["2x"]))]
+    dz2 = [float(data_all["2y"][i][-1]) for i in range(len(data_all["2y"]))]
     x2 = np.array(x2) + np.array(dx2)
-    z2 = np.array(z2)
+    z2 = np.array(z2) + np.array(dz2)
     points = np.column_stack((x2, z2))
     hull = ConvexHull(points)
     hull_points = points[hull.vertices]
@@ -111,8 +114,9 @@ def print_side(ax, data_all):
     x3 = [float(data_all["3x"][i][2]) for i in range(len(data_all["3x"]))]
     z3 = [float(data_all["3x"][i][4]) for i in range(len(data_all["3x"]))]
     dx3 = [float(data_all["3x"][i][-1]) for i in range(len(data_all["3x"]))]
+    dz3 = [float(data_all["3y"][i][-1]) for i in range(len(data_all["3y"]))]
     x3 = np.array(x3) + np.array(dx3)
-    z3 = np.array(z3)
+    z3 = np.array(z3) + np.array(dz3)
     points = np.column_stack((x3, z3))
     hull = ConvexHull(points)
     hull_points = points[hull.vertices]
@@ -130,8 +134,9 @@ def get_anays_ans(fig, data_all):
     x1 = [float(data_all["1x"][i][2]) for i in range(len(data_all["1x"]))]
     z1 = [float(data_all["1x"][i][4]) for i in range(len(data_all["1x"]))]
     dx1 = [float(data_all["1x"][i][-1]) for i in range(len(data_all["1x"]))]
+    dz1 = [float(data_all["1y"][i][-1]) for i in range(len(data_all["1y"]))]
     x1 = np.array(x1) + np.array(dx1)
-    z1 = np.array(z1)
+    z1 = np.array(z1) + np.array(dz1)
     points = np.column_stack((x1, z1))
     hull = ConvexHull(points)
     hull_points1 = points[hull.vertices]
@@ -145,8 +150,9 @@ def get_anays_ans(fig, data_all):
     x2 = [float(data_all["2x"][i][2]) for i in range(len(data_all["2x"]))]
     z2 = [float(data_all["2x"][i][4]) for i in range(len(data_all["2x"]))]
     dx2 = [float(data_all["2x"][i][-1]) for i in range(len(data_all["2x"]))]
+    dz2 = [float(data_all["2y"][i][-1]) for i in range(len(data_all["2y"]))]
     x2 = np.array(x2) + np.array(dx2)
-    z2 = np.array(z2)
+    z2 = np.array(z2) + np.array(dz2)
     points = np.column_stack((x2, z2))
     hull = ConvexHull(points)
     hull_points2 = points[hull.vertices]
@@ -160,8 +166,9 @@ def get_anays_ans(fig, data_all):
     x3 = [float(data_all["3x"][i][2]) for i in range(len(data_all["3x"]))]
     z3 = [float(data_all["3x"][i][4]) for i in range(len(data_all["3x"]))]
     dx3 = [float(data_all["3x"][i][-1]) for i in range(len(data_all["3x"]))]
+    dz3 = [float(data_all["3y"][i][-1]) for i in range(len(data_all["3y"]))]
     x3 = np.array(x3) + np.array(dx3)
-    z3 = np.array(z3)
+    z3 = np.array(z3) + np.array(dz3)
     points = np.column_stack((x3, z3))
     hull = ConvexHull(points)
     hull_points2 = points[hull.vertices]
@@ -206,7 +213,7 @@ def print_all(data_all):
 
     get_anays_ans(fig, data_all)
 
-    plt.show()
+    # plt.show()
 
 
 data_path = "../data/截面数据_v1"
@@ -220,3 +227,4 @@ if __name__ == "__main__":
         data_all[file[:-4]] = data
         print("读取文件：", file, "成功！")
     print_all(data_all)
+    plt.savefig(data_path + "/output.png")
