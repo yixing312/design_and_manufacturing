@@ -2,6 +2,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
+import time
 from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
 
@@ -13,7 +14,7 @@ from 分析同轴度 import print_all  # 读取文件并输出位列表
 def write_task_queue(Task_queue):
     # 给每个任务新建文件夹
     for task in Task_queue:
-        data_path = "../data/" + str(task)
+        data_path = "../data/Ansys/" + str(task)
         os.makedirs(data_path)
     # 每个任务占据一行内容
     with open("../data/task_queue.txt", "w", encoding="utf8") as f:
@@ -84,8 +85,18 @@ def print_ansys(task):
 
 
 if __name__ == "__main__":
-    task_queue = [(4, 4, 4, 4, 4, 4)]  # 任务队列,初始值为最初的任务
+    # task_queue = [(4, 4, 4, 4, 4, 4)]  # 任务队列,初始值为最初的任务
+    bounds = [
+        [4, 4, 4, 4, 4, 4],
+        [6, 6, 6, 6, 6, 6],
+    ]
+    lower_bound = np.array(bounds[0])
+    upper_bound = np.array(bounds[1])
+    random_values = np.random.rand(len(lower_bound))
+    task_queue = [random_values * (upper_bound - lower_bound) + lower_bound]
     write_task_queue(task_queue)  # 写入任务队列
+
+    print("当前任务队列：", task_queue)
 
     # 读取数据
     ansys_ans = []
@@ -93,20 +104,22 @@ if __name__ == "__main__":
     print_queue = []
     while 1:
         if os.path.exists("../data/task_queue.txt"):
+            # print("任务队列文件存在！")
+            time.sleep(1)
             continue
-
+        print("任务队列已经完成，规划新任务")
         for i in task_queue:
-            ansys_ans.append(get_ansys(i))
+            # ansys_ans.append(get_ansys(i))
             task_stack.append(i)
             print_queue.append(i)
 
-        # 根据 ansys_ans 的结果和 task_stack 的任务，梯度下降更新任务队列
+        # 根据 ansys_ans 的结果和 task_stack 的任务
 
-        # TODO
-
+        # TODO 退火算法获取新的任务队列
+        task_queue = [np.random.rand(6) * (upper_bound - lower_bound) + lower_bound]
         # 写入新的任务队列
         write_task_queue(task_queue)
 
         # 此时空闲下来，完成绘图工作
-        for i in print_queue:
-            print_ansys(i)
+        # for i in print_queue:
+        #     print_ansys(i)
