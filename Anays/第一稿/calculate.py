@@ -60,7 +60,11 @@ def Ansys_task(current_task):
 
 while countdown > 0:
     if os.path.exists(file_path):
+        if os.path.getsize(file_path) == 0:
+            break
         with open(file_path, "r", encoding="utf8") as f:
+            # 如果文件为空，退出循环
+
             for line in f:
                 task = line[1:-2].Split()
                 Ansys_task(task)

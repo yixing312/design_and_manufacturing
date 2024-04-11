@@ -1,8 +1,9 @@
 import os
+import time
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
-import time
+
 from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
 
@@ -16,6 +17,9 @@ from plan_tasks.gradient_descent import gradient_descent
 
 
 def write_task_queue(Task_queue):
+    """
+    给每个任务新建文件夹并生成任务队列文件
+    """
     # 给每个任务新建文件夹
     for task in Task_queue:
         data_path = "../data/Ansys/" + str(task)
@@ -86,6 +90,13 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     return task_list
 
 
+def Init_task(Bounds):
+    # !随机获取一个任务，无所谓历史任务
+    task_list = random_task([], [], Bounds)
+    # !其他初始化方法
+    return task_list
+
+
 def print_ansys(task):
     data_path = "../data/Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
@@ -100,17 +111,19 @@ def print_ansys(task):
 
 if __name__ == "__main__":
     # ! 扭矩边界
-    # bounds = [
-    #     [4, 4, 4, 4, 4, 4],
-    #     [6, 6, 6, 6, 6, 6],
-    # ]
-    # ! 施力边界
     bounds = [
-        [2500, 2500, 2500, 2500, 2500, 2500],
-        [5000, 5000, 5000, 5000, 5000, 5000],
+        [4, 4, 4, 4, 4, 4],
+        [6, 6, 6, 6, 6, 6],
     ]
-    task_queue = random_task([], [], bounds)  # 生成任务队列
+    # ! 施力边界
+    # bounds = [
+    #     [2500, 2500, 2500, 2500, 2500, 2500],
+    #     [5000, 5000, 5000, 5000, 5000, 5000],
+    # ]
+    task_queue = Init_task(bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
+
+    exp_name = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
     print("当前任务队列：", task_queue)
 
@@ -139,3 +152,11 @@ if __name__ == "__main__":
         # 此时空闲下来，完成绘图工作
         for i in print_queue:
             print_ansys(i)
+
+        if task_queue == []:
+            break
+
+    print("任务队列已经完成！")
+    with open("../data/" + exp_name + ".txt", "w", encoding="utf8") as f:
+        for i, j in zip(task_stack, ansys_ans):
+            f.write(str(i) + " " + str(j) + "\n")
