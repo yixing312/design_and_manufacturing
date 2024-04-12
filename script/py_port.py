@@ -25,7 +25,7 @@ def write_task_queue(Task_queue):
     for task in Task_queue:
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
         print("任务：", task_str)
-        data_path = Data_path + "Ansys/" + task_str
+        data_path = Data_path + "Ansys_data/" + task_str
         os.makedirs(data_path)
     # 每个任务占据一行内容
     with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
@@ -74,7 +74,7 @@ def get_concentricity(data_all):
 
 
 def get_ansys(task):
-    data_path = Data_path + "Ansys/" + ",".join([str(i) for i in task])
+    data_path = Data_path + "Ansys_data/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -107,7 +107,7 @@ def Init_task(Bounds):
 
 
 def print_ansys(task):
-    data_path = Data_path + "Ansys/" + ",".join([str(i) for i in task])
+    data_path = Data_path + "Ansys_data/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
