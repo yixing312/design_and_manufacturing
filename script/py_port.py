@@ -12,20 +12,20 @@ from plan_tasks.simulated_annealing import simulated_annealing
 from plan_tasks.gradient_descent import gradient_descent
 
 
-# 实现一个任务队列，队列中每个元素为一个六元的元组
-# 实现函数，将任务队列写入 ../data/task_queue.txt 中
+Data_path = "../data/"
 
 
 def write_task_queue(Task_queue):
     """
     给每个任务新建文件夹并生成任务队列文件
     """
+    global Data_path
     # 给每个任务新建文件夹
     for task in Task_queue:
-        data_path = "../data/Ansys/" + str(task)
+        data_path = Data_path + "Ansys/" + str(task)
         os.makedirs(data_path)
     # 每个任务占据一行内容
-    with open("../data/task_queue.txt", "w", encoding="utf8") as f:
+    with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
         for task in Task_queue:
             f.write(str(task) + "\n")
 
@@ -69,7 +69,7 @@ def get_concentricity(data_all):
 
 
 def get_ansys(task):
-    data_path = "../data/Ansys/" + str(task)
+    data_path = Data_path + "Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -98,7 +98,7 @@ def Init_task(Bounds):
 
 
 def print_ansys(task):
-    data_path = "../data/Ansys/" + str(task)
+    data_path = Data_path + "Ansys/" + str(task)
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -110,6 +110,7 @@ def print_ansys(task):
 
 
 if __name__ == "__main__":
+    global Data_path
     # ! 扭矩边界
     bounds = [
         [4, 4, 4, 4, 4, 4],
@@ -132,7 +133,7 @@ if __name__ == "__main__":
     task_stack = []
     print_queue = []
     while 1:
-        if os.path.exists("../data/task_queue.txt"):
+        if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
             time.sleep(1)
             continue
@@ -157,6 +158,6 @@ if __name__ == "__main__":
             break
 
     print("任务队列已经完成！")
-    with open("../data/" + exp_name + ".txt", "w", encoding="utf8") as f:
+    with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
         for i, j in zip(task_stack, ansys_ans):
             f.write(str(i) + " " + str(j) + "\n")
