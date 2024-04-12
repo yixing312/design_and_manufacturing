@@ -24,6 +24,7 @@ def write_task_queue(Task_queue):
     # 给每个任务新建文件夹
     for task in Task_queue:
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
+        print("任务：", task_str)
         data_path = Data_path + "Ansys/" + task_str
         os.makedirs(data_path)
     # 每个任务占据一行内容
@@ -85,10 +86,10 @@ def get_ansys(task):
 
 
 def plan_task(Ansys_ans, Task_stack, Bounds):
-    # !随机获取一个任务，无所谓历史任务
-    task_list = random_task(Ansys_ans, Task_stack, Bounds)
+    # # !随机获取一个任务，无所谓历史任务
+    # task_list = random_task(Ansys_ans, Task_stack, Bounds)
     # # !随机获取一个任务队列，数量随机
-    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
+    task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
     # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
@@ -99,7 +100,9 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
 def Init_task(Bounds):
     # !随机获取一个任务，无所谓历史任务
     task_list = random_task([], [], Bounds)
-    # !其他初始化方法
+    # # !随机获取一个任务队列，数量随机
+    task_list = random_tasks([], [], Bounds)
+    # # !其他初始化方法
     return task_list
 
 
@@ -131,8 +134,6 @@ if __name__ == "__main__":
 
     exp_name = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
-    print("当前任务队列：", task_queue)
-
     # 读取数据
     ansys_ans = []
     task_stack = []
@@ -152,7 +153,6 @@ if __name__ == "__main__":
         # 根据 ansys_ans 的结果和 task_stack 的任务
         # TODO 任务规划算法
         task_queue = plan_task(ansys_ans, task_stack, bounds)
-
         # 写入新的任务队列
         write_task_queue(task_queue)
 
@@ -160,7 +160,7 @@ if __name__ == "__main__":
         for i in print_queue:
             print_ansys(i)
 
-        if task_queue == []:
+        if not task_queue:
             break
 
         if epoch == 0:

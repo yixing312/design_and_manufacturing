@@ -14,5 +14,5 @@ def random_tasks(_Ansys_ans, _Task_stack, bounds):
     random_num = np.random.randint(1, 10)
     task_queue = []
     for _ in range(random_num):
-        task_queue.append(random_task(_Ansys_ans, _Task_stack, bounds))
+        task_queue.extend(random_task(_Ansys_ans, _Task_stack, bounds))
     return task_queue
