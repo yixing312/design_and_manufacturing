@@ -1,0 +1,2779 @@
+
+ Ansys Mechanical Enterprise                       
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *         ANSYS MAPDL 2023 R1          LEGAL NOTICES          *
+ ***************************************************************
+ *                                                             *
+ * Copyright 1971-2023 Ansys, Inc.  All rights reserved.       *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of Ansys, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the Ansys, Inc. online documentation or the Ansys, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * Ansys, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * Ansys, Inc. is a UL registered                              *
+ * ISO 9001:2015 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the Ansys, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the Ansys, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ 2023 R1 
+     
+ Point Releases and Patches installed:   
+     
+ ANSYS, Inc. License Manager 2023 R1 
+ Discovery 2023 R1   
+ SpaceClaim 2023 R1  
+ Ansys Sherlock 2023 R1  
+ Autodyn 2023 R1 
+ LS-DYNA 2023 R1 
+ CFD-Post only 2023 R1   
+ CFX (includes CFD-Post) 2023 R1 
+ Chemkin 2023 R1 
+ EnSight 2023 R1 
+ FENSAP-ICE 2023 R1  
+ Fluent (includes CFD-Post) 2023 R1  
+ Polyflow (includes CFD-Post) 2023 R1
+ Forte (includes EnSight) 2023 R1
+ TurboGrid 2023 R1   
+ ICEM CFD 2023 R1
+ Motion 2023 R1  
+ Aqwa 2023 R1
+ Speos 2023 R1   
+ Speos HPC 2023 R1   
+ optiSLang 2023 R1   
+ Additive 2023 R1
+ Customization Files for User Programmable Features 2023 R1  
+ Mechanical Products 2023 R1 
+ Icepak (includes CFD-Post) 2023 R1  
+ Remote Solve Manager Standalone Services 2023 R1
+ Ansys Sound - SAS 2023 R1   
+ Viewer 2023 R1  
+ ACIS Geometry Interface 2023 R1 
+ AutoCAD Geometry Interface 2023 R1  
+ Catia, Version 4 Geometry Interface 2023 R1 
+ Catia, Version 5 Geometry Interface 2023 R1 
+ Catia, Version 6 Geometry Interface 2023 R1 
+ Creo Elements/Direct Modeling Geometry Interface 2023 R1
+ Creo Parametric Geometry Interface 2023 R1  
+ Inventor Geometry Interface 2023 R1 
+ JTOpen Geometry Interface 2023 R1   
+ NX Geometry Interface 2023 R1   
+ Parasolid Geometry Interface  2023 R1   
+ Solid Edge Geometry Interface 2023 R1   
+ SOLIDWORKS Geometry Interface 2023 R1   
+
+
+          *****  MAPDL COMMAND LINE ARGUMENTS  *****
+  BATCH MODE REQUESTED (-b)    = NOLIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  DISTRIBUTED MEMORY PARALLEL REQUESTED
+       4 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
+    TOTAL OF     4 CORES REQUESTED
+  INPUT FILE NAME              = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3\dummy.dat
+  OUTPUT FILE NAME             = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3\solve.out
+  START-UP FILE MODE           = NOREAD
+  STOP FILE MODE               = NOREAD
+
+ RELEASE= 2023 R1              BUILD= 23.1      UP20221128   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file0  21:09:05  APR 12, 2024 CP=      0.000
+
+
+ PARAMETER _DS_PROGRESS =     999.0000000    
+
+ /INPUT FILE= ds.dat  LINE=       0
+
+
+
+ *** NOTE ***                            CP =       0.031   TIME= 21:09:05
+ The /CONFIG,NOELDB command is not valid in a distributed memory         
+ parallel solution.  Command is ignored.                                 
+
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.1513889    
+
+ TITLE= 
+ ansys_1--____ (A5)                                                            
+
+  ACT Extensions:
+      LSDYNA, 2023.1
+      5f463412-bd3e-484b-87e7-cbc0a665e474, wbex
+ /COM,     ANSYSMotion, 2023.1
+      20180725-3f81-49eb-9f31-41364844c769, wbex
+  
+
+ SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3\
+
+ SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_SOLVERFILES_DIR(1) = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MECH\
+
+ SET PARAMETER DIMENSIONS ON  _WB_USERFILES_DIR
+  TYPE=STRI  DIMENSIONS=      248        1        1
+
+ PARAMETER _WB_USERFILES_DIR(1) = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\user_files\
+ --- Data in consistent NMM units. See Solving Units in the help system for more
+
+ MPA UNITS SPECIFIED FOR INTERNAL    
+  LENGTH      = MILLIMETERS (mm)
+  MASS        = TONNE (Mg)
+  TIME        = SECONDS (sec)
+  TEMPERATURE = CELSIUS (C)
+  TOFFSET     = 273.0
+  FORCE       = NEWTON (N)
+  HEAT        = MILLIJOULES (mJ)
+
+ INPUT  UNITS ARE ALSO SET TO MPA 
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   21:09:05  APR 12, 2024 CP=      0.031
+
+ ansys_1--____ (A5)                                                            
+
+
+
+          ***** MAPDL ANALYSIS DEFINITION (PREP7) *****
+ *********** Nodes for the whole assembly ***********
+ *********** Nodes for all Remote Points ***********
+ *********** Elements for Body 1 "bolt11" ***********
+ *********** Elements for Body 2 "bolt8" ***********
+ *********** Elements for Body 3 "bolt9" ***********
+ *********** Elements for Body 4 "bolt10" ***********
+ *********** Elements for Body 5 "bolt7" ***********
+ *********** Elements for Body 6 "bolt12" ***********
+ *********** Elements for Body 7 "up" ***********
+ *********** Elements for Body 8 "down" ***********
+ *********** Send User Defined Coordinate System(s) ***********
+ *********** Set Reference Temperature ***********
+ *********** Send Materials ***********
+ *********** Create Contact "摩擦的 - bolt11_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 10 & 9
+ *********** Create Contact "摩擦的 - bolt8_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 12 & 11
+ *********** Create Contact "摩擦的 - bolt9_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 14 & 13
+ *********** Create Contact "摩擦的 - bolt10_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 16 & 15
+ *********** Create Contact "摩擦的 - bolt7_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 18 & 17
+ *********** Create Contact "摩擦的 - bolt12_down 至 up_up" ***********
+             Real Constant Set For Above Contact Is 20 & 19
+ *********** Create Contact "摩擦的 - up_A 至 down_E" ***********
+             Real Constant Set For Above Contact Is 22 & 21
+ *********** Create Contact "摩擦的 - up_C 至 down_C" ***********
+             Real Constant Set For Above Contact Is 24 & 23
+ *********** Create Contact "摩擦的 - up_D 至 down_B" ***********
+             Real Constant Set For Above Contact Is 26 & 25
+ *********** Create Contact "摩擦的 - up_F 至 down_F" ***********
+             Real Constant Set For Above Contact Is 28 & 27
+ *********** Create Contact "摩擦的 - up_E 至 down_A" ***********
+             Real Constant Set For Above Contact Is 30 & 29
+ *********** Create Contact "摩擦的 - up_B 至 down_D" ***********
+             Real Constant Set For Above Contact Is 32 & 31
+ *********** Create Contact "绑定 - bolt_11 至 down_11" ***********
+             Real Constant Set For Above Contact Is 34 & 33
+ *********** Create Contact "绑定 - bolt_8 至 down_8" ***********
+             Real Constant Set For Above Contact Is 36 & 35
+ *********** Create Contact "绑定 - bolt_9 至 down_9" ***********
+             Real Constant Set For Above Contact Is 38 & 37
+ *********** Create Contact "绑定 - bolt_10 至 down_10" ***********
+             Real Constant Set For Above Contact Is 40 & 39
+ *********** Create Contact "绑定 - bolt_7 至 down_7" ***********
+             Real Constant Set For Above Contact Is 42 & 41
+ *********** Create Contact "绑定 - bolt_12 至 down_12" ***********
+             Real Constant Set For Above Contact Is 44 & 43
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Send Named Selection as Node Component ***********
+ *********** Fixed Supports ***********
+ *********** Create Bolt Pretension "_____" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+ *********** Create Bolt Pretension "_____ 2" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+ *********** Create Bolt Pretension "_____ 3" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+ *********** Create Bolt Pretension "_____ 4" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+ *********** Create Bolt Pretension "_____ 5" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+ *********** Create Bolt Pretension "_____ 6" ***********
+  CREATE COMPONENT CMEBOLT  FROM PRETENSION ELEMENTS
+  CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
+
+
+ ***** ROUTINE COMPLETED *****  CP =         0.438
+
+
+ --- Number of total nodes = 20803
+ --- Number of contact elements = 5000
+ --- Number of spring elements = 0
+ --- Number of bearing elements = 0
+ --- Number of solid elements = 10497
+ --- Number of condensed parts = 0
+ --- Number of total elements = 15629
+
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.1516667    
+ ****************************************************************************
+ *************************    SOLUTION       ********************************
+ ****************************************************************************
+
+ *****  MAPDL SOLUTION ROUTINE  *****
+
+
+ PERFORM A STATIC ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ PARAMETER _THICKRATIO =     0.000000000    
+
+ USE SPARSE MATRIX DIRECT SOLVER
+
+ CONTACT INFORMATION PRINTOUT LEVEL       1
+
+ DO NOT COMBINE ELEMENT MATRIX FILES (.emat) AFTER DISTRIBUTED PARALLEL SOLUTION
+
+ DO NOT COMBINE ELEMENT SAVE DATA FILES (.esav) AFTER DISTRIBUTED PARALLEL SOLUTION
+
+ NLDIAG: Nonlinear diagnostics CONT option is set to ON. 
+         Writing frequency : each ITERATION.
+
+ DEFINE RESTART CONTROL FOR LOADSTEP LAST
+ AT FREQUENCY OF LAST AND NUMBER FOR OVERWRITE IS   -1
+
+ DELETE RESTART FILES OF ENDSTEP
+ ****************************************************
+ ******************* SOLVE FOR LS 1 OF 1 ****************
+
+ PRINTOUT RESUMED BY /GOP
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20666 TO    20666 BY        1
+  REAL=  5.57100000       IMAG=  0.00000000    
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20667 TO    20667 BY        1
+  REAL=  4.92900000       IMAG=  0.00000000    
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20668 TO    20668 BY        1
+  REAL=  5.41400000       IMAG=  0.00000000    
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20669 TO    20669 BY        1
+  REAL=  4.05700000       IMAG=  0.00000000    
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20670 TO    20670 BY        1
+  REAL=  5.12600000       IMAG=  0.00000000    
+
+ SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20671 TO    20671 BY        1
+  REAL=  4.45400000       IMAG=  0.00000000    
+
+ USE AUTOMATIC TIME STEPPING THIS LOAD STEP
+
+ USE       1 SUBSTEPS INITIALLY THIS LOAD STEP FOR ALL  DEGREES OF FREEDOM
+ FOR AUTOMATIC TIME STEPPING:
+   USE     10 SUBSTEPS AS A MAXIMUM
+   USE      1 SUBSTEPS AS A MINIMUM
+
+ TIME=  1.0000    
+
+ ERASE THE CURRENT DATABASE OUTPUT CONTROL TABLE.
+
+
+ WRITE ALL  ITEMS TO THE DATABASE WITH A FREQUENCY OF NONE
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE NSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE RSOL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE EANG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE ETMP ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE VENG ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE STRS ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE EPEL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE EPPL ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ WRITE CONT ITEMS TO THE DATABASE WITH A FREQUENCY OF ALL 
+   FOR ALL APPLICABLE ENTITIES
+
+ *GET  ANSINTER_  FROM  ACTI  ITEM=INT        VALUE=  0.00000000    
+
+ *IF  ANSINTER_                         ( =   0.00000     )  NE  
+      0                                 ( =   0.00000     )  THEN    
+
+ *ENDIF
+
+ *** NOTE ***                            CP =       0.469   TIME= 21:09:06
+ The automatic domain decomposition logic has selected the MESH domain   
+ decomposition method with 4 processes per solution.                     
+
+ *****  MAPDL SOLVE    COMMAND  *****
+
+ *** WARNING ***                         CP =       0.484   TIME= 21:09:06
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** NOTE ***                            CP =       0.484   TIME= 21:09:06
+ The model data was checked and warning messages were found.             
+  Please review output or errors file (                                  
+ E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr 
+ rC1D3\file0.err ) for these warning messages.                           
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+      --- GIVE SUGGESTIONS AND RESET THE KEY OPTIONS ---
+
+ ELEMENT TYPE         1 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         2 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         3 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         4 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         5 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         6 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         7 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+ ELEMENT TYPE         8 IS SOLID187. IT IS NOT ASSOCIATED WITH FULLY INCOMPRESSIBLE
+ HYPERELASTIC MATERIALS. NO SUGGESTION IS AVAILABLE AND NO RESETTING IS NEEDED.
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   21:09:06  APR 12, 2024 CP=      0.484
+
+ ansys_1--____ (A5)                                                            
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ  
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   OFFSET TEMPERATURE FROM ABSOLUTE ZERO . . . . .  273.15    
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE             
+   NEWTON-RAPHSON OPTION . . . . . . . . . . . . .PROGRAM CHOSEN   
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** WARNING ***                         CP =       0.516   TIME= 21:09:06
+ Material number 45 (used by element 21640) should normally have at      
+ least one MP or one TB type command associated with it.  Output of      
+ energy by material may not be available.                                
+
+ *** NOTE ***                            CP =       0.516   TIME= 21:09:06
+ The step data was checked and warning messages were found.              
+  Please review output or errors file (                                  
+ E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr 
+ rC1D3\file0.err ) for these warning messages.                           
+
+ *** NOTE ***                            CP =       0.516   TIME= 21:09:06
+ This nonlinear analysis defaults to using the full Newton-Raphson       
+ solution procedure.  This can be modified using the NROPT command.      
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 9 and contact element type 9 has been set up.  The         
+ companion pair has real constant set ID 10.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 16685 and target element 16863.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 10 and contact element type 9 has been set up.  The        
+ companion pair has real constant set ID 9.  Both pairs should have the  
+ same behavior.                                                          
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 16725 and target element 16647.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 11 and contact element type 11 has been set up.  The       
+ companion pair has real constant set ID 12.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 1.421085472E-14 was detected between contact  
+ element 17020 and target element 17199.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 12 and contact element type 11 has been set up.  The       
+ companion pair has real constant set ID 11.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 17084 and target element 16982.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 13 and contact element type 13 has been set up.  The       
+ companion pair has real constant set ID 14.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 17365 and target element 17546.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 14 and contact element type 13 has been set up.  The       
+ companion pair has real constant set ID 13.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 17409 and target element 17342.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 15 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 16.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 17685 and target element 17897.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 16 and contact element type 15 has been set up.  The       
+ companion pair has real constant set ID 15.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 17757 and target element 17663.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 17 and contact element type 17 has been set up.  The       
+ companion pair has real constant set ID 18.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 18032 and target element 18255.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 18 and contact element type 17 has been set up.  The       
+ companion pair has real constant set ID 17.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 18082 and target element 18001.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 19 and contact element type 19 has been set up.  The       
+ companion pair has real constant set ID 20.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.86218E-01
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.24103E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                2.4103    
+ Average contact pair depth                   0.86218    
+ Average target surface length                 11.355    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                 0.86218    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 18366 and target element 18549.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 20 and contact element type 19 has been set up.  The       
+ companion pair has real constant set ID 19.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.25434E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.55831    
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.11848    
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                11.848    
+ Average contact pair depth                    5.5831    
+ Average target surface length                 2.3741    
+ Default pinball region factor PINB            1.0000    
+ The resulting pinball region                  5.5831    
+ *WARNING*: Initial penetration is included.
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Max.  Initial penetration 7.105427358E-15 was detected between contact  
+ element 18403 and target element 18342.                                 
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.938   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 21 and contact element type 21 has been set up.  The       
+ companion pair has real constant set ID 22.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34953E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.40626    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.67846E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.7846    
+ Average contact pair depth                    4.0626    
+ Average target surface length                 6.6389    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0 was detected between contact element 18750  
+ and target element 18895.                                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 22 and contact element type 21 has been set up.  The       
+ companion pair has real constant set ID 21.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34953E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.37540    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.68078E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.8078    
+ Average contact pair depth                    3.7540    
+ Average target surface length                 6.6474    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0 was detected between contact element 18820  
+ and target element 18709.                                               
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 23 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 24.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34948E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.40632    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    4.0632    
+ Average target surface length                 6.6673    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.108 was detected between contact element 19049 and  
+ target element 19233.                                                   
+ You may move entire target surface by: x= 3.850013488E-16, y= -0.108,   
+ z= 2.000635446E-16, to bring it in contact.                             
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 24 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 23.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34948E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.37732    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.68181E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.8181    
+ Average contact pair depth                    3.7732    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.108 was detected between contact element 19124 and  
+ target element 18985.                                                   
+ You may move entire target surface by: x= -1.058616052E-17, y= 0.108,   
+ z= -7.073446319E-18, to bring it in contact.                            
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 25 and contact element type 25 has been set up.  The       
+ companion pair has real constant set ID 26.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.37458E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.37910    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.67698E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.7698    
+ Average contact pair depth                    3.7910    
+ Average target surface length                 6.5603    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.128 was detected between contact element 19350 and  
+ target element 19488.                                                   
+ You may move entire target surface by: x= 0, y= -0.128, z= 0, to bring  
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 26 and contact element type 25 has been set up.  The       
+ companion pair has real constant set ID 25.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.37458E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.35313    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.67035E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.7035    
+ Average contact pair depth                    3.5313    
+ Average target surface length                 6.6288    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.128 was detected between contact element 19408 and  
+ target element 19285.                                                   
+ You may move entire target surface by: x= 0, y= 0.128, z= 0, to bring   
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 27 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 28.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36682E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38711    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    3.8711    
+ Average target surface length                 6.7126    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.152 was detected between contact element 19657 and  
+ target element 19778.                                                   
+ You may move entire target surface by: x= 0, y= -0.152, z= 0, to bring  
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 28 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 27.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36682E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.36658    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.68761E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.8761    
+ Average contact pair depth                    3.6658    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.152 was detected between contact element 19717 and  
+ target element 19610.                                                   
+ You may move entire target surface by: x= 0, y= 0.152, z= 0, to bring   
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 29 and contact element type 29 has been set up.  The       
+ companion pair has real constant set ID 30.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.37864E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.37502    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    3.7502    
+ Average target surface length                 6.3738    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.161 was detected between contact element 19926 and  
+ target element 20077.                                                   
+ You may move entire target surface by: x= 0, y= -0.161, z= 0, to bring  
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 30 and contact element type 29 has been set up.  The       
+ companion pair has real constant set ID 29.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.37864E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.41017    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.65094E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.5094    
+ Average contact pair depth                    4.1017    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.161 was detected between contact element 20036 and  
+ target element 19875.                                                   
+ You may move entire target surface by: x= 0, y= 0.161, z= 0, to bring   
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 31 and contact element type 31 has been set up.  The       
+ companion pair has real constant set ID 32.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36812E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38575    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    3.8575    
+ Average target surface length                 6.3835    
+ User defined pinball region PINB             0.40000    
+ Incorrect contact offset is defined. Check the sign for CNOF.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.188 was detected between contact element 20228 and  
+ target element 20394.                                                   
+ You may move entire target surface by: x= -1.588873025E-17, y= -0.188,  
+ z= -1.706604179E-17, to bring it in contact.                            
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 32 and contact element type 31 has been set up.  The       
+ companion pair has real constant set ID 31.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36812E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.40579    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.65058E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.5058    
+ Average contact pair depth                    4.0579    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Incorrect contact offset is defined. Check the sign for CNOF.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Min.  Initial gap 0.188 was detected between contact element 20308 and  
+ target element 20164.                                                   
+ You may move entire target surface by: x= 0, y= 0.188, z= 0, to bring   
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 33 and contact element type 33 has been set up.  The       
+ companion pair has real constant set ID 34.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.12683E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.7124    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.720175752 was detected between contact      
+ element 20565 and target element 20649.                                 
+ You may move entire target surface by : x= 0.266448058, y=              
+ -4.071040229E-03, z= 0.669060515,to reduce initial penetration.         
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 34 and contact element type 33 has been set up.  The       
+ companion pair has real constant set ID 33.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.12683E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.32326    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.24911E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.9821    
+ Average contact pair depth                    3.2326    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.80814    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.736885432 was detected between contact      
+ element 20627 and target element 20491.                                 
+ You may move entire target surface by : x= -8.181940957E-03, y= 0, z=   
+ -0.736840007,to reduce initial penetration.                             
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 35 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 36.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10604E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.4568    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.71864827 was detected between contact       
+ element 20796 and target element 20841.                                 
+ You may move entire target surface by : x= -0.656886197, y=             
+ 8.073089659E-04, z= -0.291470767,to reduce initial penetration.         
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 36 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 35.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10604E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38663    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.23548E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.7095    
+ Average contact pair depth                    3.8663    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.96659    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.903750595 was detected between contact      
+ element 20813 and target element 20661.                                 
+ You may move entire target surface by : x= 0.756136652, y= 0.219281942, 
+ z= 0.443776893,to reduce initial penetration.                           
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 37 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 38.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10639E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.4307    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.636484745 was detected between contact      
+ element 20959 and target element 21042.                                 
+ You may move entire target surface by : x= 0.168295493, y=              
+ -2.627472828E-04, z= -0.613831727,to reduce initial penetration.        
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 38 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 37.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10639E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38536    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.23404E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.6808    
+ Average contact pair depth                    3.8536    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.96341    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.834387356 was detected between contact      
+ element 21018 and target element 20884.                                 
+ You may move entire target surface by : x= -0.494979344, y=             
+ 0.209957809, z= 0.638055975,to reduce initial penetration.              
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 39 and contact element type 39 has been set up.  The       
+ companion pair has real constant set ID 40.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.11142E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.6837    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.711870264 was detected between contact      
+ element 21194 and target element 21226.                                 
+ You may move entire target surface by : x= -0.544572378, y=             
+ -1.095242765E-04, z= -0.458475938,to reduce initial penetration.        
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 40 and contact element type 39 has been set up.  The       
+ companion pair has real constant set ID 39.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.11142E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.36798    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.24749E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.9498    
+ Average contact pair depth                    3.6798    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.91995    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.86863053 was detected between contact       
+ element 21202 and target element 21071.                                 
+ You may move entire target surface by : x= -0.512154252, y=             
+ 0.230953651, z= 0.662478249,to reduce initial penetration.              
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 41 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 42.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13244E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.6216    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.683575192 was detected between contact      
+ element 21358 and target element 21437.                                 
+ You may move entire target surface by : x= -0.255760799, y=             
+ -6.53091198E-02, z= 0.630552278,to reduce initial penetration.          
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 42 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 41.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13244E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.30957    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.24425E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.8850    
+ Average contact pair depth                    3.0957    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.77392    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.714791011 was detected between contact      
+ element 21414 and target element 21285.                                 
+ You may move entire target surface by : x= -0.193961011, y=             
+ -0.138615117, z= 0.673862869,to reduce initial penetration.             
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 43 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 44.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13111E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.5714    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.688490571 was detected between contact      
+ element 21568 and target element 21635.                                 
+ You may move entire target surface by : x= -0.673161518, y=             
+ -4.956377115E-04, z= -0.144473493,to reduce initial penetration.        
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 44 and contact element type 43 has been set up.  The       
+ companion pair has real constant set ID 43.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13111E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.31271    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.24136E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.8273    
+ Average contact pair depth                    3.1271    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.78177    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       0.953   TIME= 21:09:06
+ Max.  Initial penetration 0.576371648 was detected between contact      
+ element 21608 and target element 21449.                                 
+ You may move entire target surface by : x= 0.420245362, y=              
+ 5.654365339E-02, z= 0.390385615,to reduce initial penetration.          
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+  
+  
+
+  
+  
+     D I S T R I B U T E D   D O M A I N   D E C O M P O S E R
+  
+  ...Number of elements: 15629
+  ...Number of nodes:    20803
+  ...Decompose to 4 CPU domains
+  ...Element load balance ratio =     1.019
+
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   AUTOMATIC TIME STEPPING . . . . . . . . . . . .    ON
+      INITIAL NUMBER OF SUBSTEPS . . . . . . . . .     1
+      MAXIMUM NUMBER OF SUBSTEPS . . . . . . . . .    10
+      MINIMUM NUMBER OF SUBSTEPS . . . . . . . . .     1
+   MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS. . . .    15
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   TERMINATE ANALYSIS IF NOT CONVERGED . . . . . .YES (EXIT)  
+   CONVERGENCE CONTROLS. . . . . . . . . . . . . .USE DEFAULTS
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS
+      ITEM     FREQUENCY   COMPONENT
+       ALL       NONE               
+      NSOL        ALL               
+      RSOL        ALL               
+      EANG        ALL               
+      ETMP        ALL               
+      VENG        ALL               
+      STRS        ALL               
+      EPEL        ALL               
+      EPPL        ALL               
+      CONT        ALL               
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= file.mntr                                                                                                                                                                                                                                                           
+
+ >>>> PRETENSION ELEMENT STATUS <<<<
+ SECTION NAME     PT.NODE  --------STATUS--------------------  ----LOAD SOURCE----
+    46              20667  APPLIED PRELOAD FORCE=  4.9290      F COMMAND
+    48              20669  APPLIED PRELOAD FORCE=  4.0570      F COMMAND
+    50              20671  APPLIED PRELOAD FORCE=  4.4540      F COMMAND
+    49              20670  APPLIED PRELOAD FORCE=  5.1260      F COMMAND
+    47              20668  APPLIED PRELOAD FORCE=  5.4140      F COMMAND
+    45              20666  APPLIED PRELOAD FORCE=  5.5710      F COMMAND
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 23 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 24.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34948E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.40632    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    4.0632    
+ Average target surface length                 6.6673    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Min.  Initial gap 0.108 was detected between contact element 19049 and  
+ target element 19233.                                                   
+ You may move entire target surface by: x= 3.850013488E-16, y= -0.108,   
+ z= 2.000635446E-16, to bring it in contact.                             
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 24 and contact element type 23 has been set up.  The       
+ companion pair has real constant set ID 23.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.34948E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.37732    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.68181E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.8181    
+ Average contact pair depth                    3.7732    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Min.  Initial gap 0.108 was detected between contact element 19124 and  
+ target element 18985.                                                   
+ You may move entire target surface by: x= -1.058616052E-17, y= 0.108,   
+ z= -7.073446319E-18, to bring it in contact.                            
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 27 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 28.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36682E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38711    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.66027E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.6027    
+ Average contact pair depth                    3.8711    
+ Average target surface length                 6.7126    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Min.  Initial gap 0.152 was detected between contact element 19657 and  
+ target element 19778.                                                   
+ You may move entire target surface by: x= 0, y= -0.152, z= 0, to bring  
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 28 and contact element type 27 has been set up.  The       
+ companion pair has real constant set ID 27.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.36682E+06
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.36658    
+ Stabilization damping factor in normal       0.10000    
+ Default stabilization damping in tangent     0.10000E-02
+ Stabilization damping will be activated for all load steps
+ Max. initial friction coefficient MU         0.15000    
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.10000E-01
+ The resulting elastic slip tolerance         0.68761E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                6.8761    
+ Average contact pair depth                    3.6658    
+ Average target surface length                 6.4703    
+ User defined pinball region PINB             0.40000    
+ Contact offset is included. Initial geometric penetration is excluded.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Min.  Initial gap 0.152 was detected between contact element 19717 and  
+ target element 19610.                                                   
+ You may move entire target surface by: x= 0, y= 0.152, z= 0, to bring   
+ it in contact.                                                          
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 35 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 36.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10604E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.4568    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.71864827 was detected between contact       
+ element 20796 and target element 20841.                                 
+ You may move entire target surface by : x= -0.656886197, y=             
+ 8.073089659E-04, z= -0.291470767,to reduce initial penetration.         
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 36 and contact element type 35 has been set up.  The       
+ companion pair has real constant set ID 35.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10604E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38663    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.23548E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.7095    
+ Average contact pair depth                    3.8663    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.96659    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.903750595 was detected between contact      
+ element 20813 and target element 20661.                                 
+ You may move entire target surface by : x= 0.756136652, y= 0.219281942, 
+ z= 0.443776893,to reduce initial penetration.                           
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 37 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 38.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10639E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.4307    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.636484745 was detected between contact      
+ element 20959 and target element 21042.                                 
+ You may move entire target surface by : x= 0.168295493, y=              
+ -2.627472828E-04, z= -0.613831727,to reduce initial penetration.        
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 38 and contact element type 37 has been set up.  The       
+ companion pair has real constant set ID 37.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.10639E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.38536    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.23404E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.6808    
+ Average contact pair depth                    3.8536    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.96341    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.834387356 was detected between contact      
+ element 21018 and target element 20884.                                 
+ You may move entire target surface by : x= -0.494979344, y=             
+ 0.209957809, z= 0.638055975,to reduce initial penetration.              
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 41 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 42.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will keep the current pair and deactivate its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13244E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.28856    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.17710E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                3.5419    
+ Average contact pair depth                    2.8856    
+ Average target surface length                 4.6216    
+ Default pinball region factor PINB           0.25000    
+ *WARNING*: The default pinball radius may be too small to capture       
+ contacting zone under small sliding assumption.  Redefine the pinball   
+ radius if necessary.                                                    
+ The resulting pinball region                 0.72140    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.683575192 was detected between contact      
+ element 21358 and target element 21437.                                 
+ You may move entire target surface by : x= -0.255760799, y=             
+ -6.53091198E-02, z= 0.630552278,to reduce initial penetration.          
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Symmetric Deformable- deformable contact pair identified by real        
+ constant set 42 and contact element type 41 has been set up.  The       
+ companion pair has real constant set ID 41.  Both pairs should have     
+ the same behavior.                                                      
+ MAPDL will deactivate the current pair and keep its companion pair,     
+ resulting in asymmetric contact.                                        
+ Small sliding logic is assumed
+ Contact algorithm: Augmented Lagrange method
+ Contact detection at: Gauss integration point
+ Contact stiffness factor FKN                  1.0000    
+ The resulting initial contact stiffness      0.13244E+07
+ Default penetration tolerance factor FTOLN   0.10000    
+ The resulting penetration tolerance          0.30957    
+ Default opening contact stiffness OPSF will be used.
+ Default tangent stiffness factor FKT          1.0000    
+ Default elastic slip factor SLTOL            0.50000E-02
+ The resulting elastic slip tolerance         0.24425E-01
+ Update contact stiffness at each iteration
+ Default Max. friction stress TAUMAX          0.10000E+21
+ Average contact surface length                4.8850    
+ Average contact pair depth                    3.0957    
+ Average target surface length                 3.4861    
+ Default pinball region factor PINB           0.25000    
+ The resulting pinball region                 0.77392    
+ Initial penetration/gap is excluded.
+ Bonded contact (always) is defined.
+
+ *** NOTE ***                            CP =       1.266   TIME= 21:09:06
+ Max.  Initial penetration 0.714791011 was detected between contact      
+ element 21414 and target element 21285.                                 
+ You may move entire target surface by : x= -0.193961011, y=             
+ -0.138615117, z= 0.673862869,to reduce initial penetration.             
+ *WARNING*: The geometric gap/penetration may be too large.  Increase    
+ pinball radius if it is a true geometric gap/penetration.  Decrease     
+ pinball if it is a false one.                                           
+ ****************************************
+  
+ MAXIMUM NUMBER OF EQUILIBRIUM ITERATIONS HAS BEEN MODIFIED              
+  TO BE, NEQIT = 26, BY SOLUTION CONTROL LOGIC.                          
+
+ *WARNING*: The geometrical penetration for certain contact pairs (e.g.  
+ ID 35) may be too large.  Increase pinball if it is a true geometrical  
+ penetration.  Decrease pinball if it is a false one.                    
+  
+ The FEA model contains 0 external CE equations and 396 internal CE      
+ equations.                                                              
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          23
+ Min.  Gap of 0.108 has been detected between contact element 19049 and  
+ target element 19233.                                                   
+ Max.  Pinball distance 0.4.                                             
+ One of the contact searching regions contains at least 17 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          24
+
+ *** NOTE ***                            CP =       1.641   TIME= 21:09:07
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          27
+ Min.  Gap of 0.152 has been detected between contact element 19657 and  
+ target element 19778.                                                   
+ Max.  Pinball distance 0.4.                                             
+ One of the contact searching regions contains at least 19 target        
+ elements.                                                               
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          28
+
+ *** NOTE ***                            CP =       1.641   TIME= 21:09:07
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          35
+ Max.  Penetration of -5.016976714E-13 has been detected between contact 
+ element 20744 and target element 20844.                                 
+  
+ Max.  Geometrical penetration of -0.71864827 has been detected between  
+ contact element 20796 and target element 20841.                         
+ *WARNING*: The geometrical penetration may be too large.  Increase      
+ pinball if it is a true geometrical penetration.  Decrease pinball if   
+ it is a false one.                                                      
+ For total 75 contact elements, there are 37 elements are in contact.    
+ There are 37 elements are in sticking.                                  
+ Contacting area 157.032364.                                             
+ Max.  Pinball distance 0.721398396.                                     
+ One of the contact searching regions contains at least 18 target        
+ elements.                                                               
+ Max.  Pressure/force 2.876801047E-07.                                   
+ Max.  Normal stiffness 573413.275.                                      
+ Min.  Normal stiffness 573413.275.                                      
+ Max.  Tangential stiffness 43005.9956.                                  
+ Min.  Tangential stiffness 43005.9956.                                  
+ Contact pair force norm 1.612810132E-06 and criterion 1.612810157E-07.  
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          36
+
+ *** NOTE ***                            CP =       1.641   TIME= 21:09:07
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          37
+ Max.  Penetration of -1.70023525E-13 has been detected between contact  
+ element 20955 and target element 21045.                                 
+  
+ Max.  Geometrical penetration of -0.636484745 has been detected between 
+ contact element 20959 and target element 21042.                         
+ *WARNING*: The geometrical penetration may be too large.  Increase      
+ pinball if it is a true geometrical penetration.  Decrease pinball if   
+ it is a false one.                                                      
+ For total 75 contact elements, there are 40 elements are in contact.    
+ There are 40 elements are in sticking.                                  
+ Contacting area 159.872532.                                             
+ Max.  Pinball distance 0.721398396.                                     
+ One of the contact searching regions contains at least 18 target        
+ elements.                                                               
+ Max.  Pressure/force 9.781522378E-08.                                   
+ Max.  Normal stiffness 575304.057.                                      
+ Min.  Normal stiffness 575304.057.                                      
+ Max.  Tangential stiffness 43147.8043.                                  
+ Min.  Tangential stiffness 43147.8043.                                  
+ Contact pair force norm 5.570967505E-07 and criterion 5.570967588E-08.  
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          38
+
+ *** NOTE ***                            CP =       1.641   TIME= 21:09:07
+ Contact pair is inactive.                                               
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          41
+ Max.  Penetration of -9.207638611E-14 has been detected between contact 
+ element 21352 and target element 21432.                                 
+  
+ Max.  Geometrical penetration of -0.683575192 has been detected between 
+ contact element 21358 and target element 21437.                         
+ *WARNING*: The geometrical penetration may be too large.  Increase      
+ pinball if it is a true geometrical penetration.  Decrease pinball if   
+ it is a false one.                                                      
+ For total 75 contact elements, there are 40 elements are in contact.    
+ There are 40 elements are in sticking.                                  
+ Contacting area 168.994297.                                             
+ Max.  Pinball distance 0.721398395.                                     
+ One of the contact searching regions contains at least 17 target        
+ elements.                                                               
+ Max.  Pressure/force 6.594176896E-08.                                   
+ Max.  Normal stiffness 716163.739.                                      
+ Min.  Normal stiffness 716163.739.                                      
+ Max.  Tangential stiffness 53712.2804.                                  
+ Min.  Tangential stiffness 53712.2804.                                  
+ Contact pair force norm 9.939416132E-08 and criterion 9.939416281E-09.  
+ *************************************************
+  
+ *************************************************
+  SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          42
+
+ *** NOTE ***                            CP =       1.641   TIME= 21:09:07
+ Contact pair is inactive.                                               
+
+
+                         ***********  PRECISE MASS SUMMARY  ***********
+
+   TOTAL RIGID BODY MASS MATRIX ABOUT ORIGIN
+               Translational mass               |   Coupled translational/rotational mass
+        0.32281E-02    0.0000        0.0000     |     0.0000       0.38737       0.48117E-01
+         0.0000       0.32281E-02    0.0000     |   -0.38737        0.0000       0.65339E-02
+         0.0000        0.0000       0.32281E-02 |   -0.48117E-01  -0.65339E-02    0.0000    
+     ------------------------------------------ | ------------------------------------------
+                                                |         Rotational mass (inertia)
+                                                |     54.235       0.96680E-01  -0.78441    
+                                                |    0.96680E-01    51.054        5.7738    
+                                                |   -0.78441        5.7738        7.7675    
+
+   TOTAL MASS = 0.32281E-02
+     The mass principal axes coincide with the global Cartesian axes
+
+   CENTER OF MASS (X,Y,Z)=    2.0241       -14.906        120.00    
+
+   TOTAL INERTIA ABOUT CENTER OF MASS
+         7.0346      -0.71215E-03  -0.35939E-03
+       -0.71215E-03    4.5581      -0.20226E-03
+       -0.35939E-03  -0.20226E-03    7.0371    
+     The inertia principal axes coincide with the global Cartesian axes
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1  0.679741E-05
+     2  0.679741E-05
+     3  0.679741E-05
+     4  0.679741E-05
+     5  0.679741E-05
+     6  0.679741E-05
+     7  0.561578E-03
+     8  0.262575E-02
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 13194730.3 at element 7782.                                   
+ Minimum = 0.239836935 at element 20239.                                 
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1       444  SOLID187      0.000   0.000000
+        2       444  SOLID187      0.016   0.000035
+        3       444  SOLID187      0.031   0.000070
+        4       444  SOLID187      0.047   0.000106
+        5       444  SOLID187      0.016   0.000035
+        6       444  SOLID187      0.031   0.000070
+        7      3510  SOLID187      0.156   0.000045
+        8      4323  SOLID187      0.266   0.000061
+        9       170  CONTA174      0.000   0.000000
+       10       170  TARGE170      0.000   0.000000
+       11       170  CONTA174      0.000   0.000000
+       12       170  TARGE170      0.000   0.000000
+       13       170  CONTA174      0.016   0.000092
+       14       170  TARGE170      0.000   0.000000
+       15       170  CONTA174      0.000   0.000000
+       16       170  TARGE170      0.000   0.000000
+       17       170  CONTA174      0.000   0.000000
+       18       170  TARGE170      0.000   0.000000
+       19       170  CONTA174      0.000   0.000000
+       20       170  TARGE170      0.016   0.000092
+       21       145  CONTA174      0.047   0.000323
+       22       145  TARGE170      0.000   0.000000
+       23       147  CONTA174      0.031   0.000213
+       24       147  TARGE170      0.000   0.000000
+       25       145  CONTA174      0.062   0.000431
+       26       145  TARGE170      0.000   0.000000
+       27       147  CONTA174      0.047   0.000319
+       28       147  TARGE170      0.000   0.000000
+       29       153  CONTA174      0.000   0.000000
+       30       153  TARGE170      0.000   0.000000
+       31       153  CONTA174      0.000   0.000000
+       32       153  TARGE170      0.000   0.000000
+       33        97  CONTA174      0.016   0.000161
+       34        97  TARGE170      0.000   0.000000
+       35        99  CONTA174      0.000   0.000000
+       36        99  TARGE170      0.000   0.000000
+       37        99  CONTA174      0.000   0.000000
+       38        99  TARGE170      0.000   0.000000
+       39        97  CONTA174      0.000   0.000000
+       40        97  TARGE170      0.000   0.000000
+       41        99  CONTA174      0.000   0.000000
+       42        99  TARGE170      0.000   0.000000
+       43        99  CONTA174      0.000   0.000000
+       44        99  TARGE170      0.000   0.000000
+       45        22  PRETS179      0.000   0.000000
+       46        22  PRETS179      0.000   0.000000
+       47        22  PRETS179      0.000   0.000000
+       48        22  PRETS179      0.000   0.000000
+       49        22  PRETS179      0.000   0.000000
+       50        22  PRETS179      0.000   0.000000
+ Time at end of element matrix formulation CP = 1.640625.                
+
+ ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= file.rdb
+  FOR POSSIBLE RESUME FROM THIS POINT
+     FORCE CONVERGENCE VALUE  =   12.13      CRITERION=  0.6067E-01
+
+ DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =       61677,    Maximum wavefront =    363
+
+  Process memory allocated for solver              =    75.286 MB
+  Process memory required for in-core solution     =    72.467 MB
+  Process memory required for out-of-core solution =    39.378 MB
+
+  Total memory allocated for solver                =   291.955 MB
+  Total memory required for in-core solution       =   280.355 MB
+  Total memory required for out-of-core solution   =   132.568 MB
+
+ *** NOTE ***                            CP =       1.984   TIME= 21:09:08
+ The Distributed Sparse Matrix Solver is currently running in the        
+ in-core memory mode.  This memory mode uses the most amount of memory   
+ in order to avoid using the hard drive as much as possible, which most  
+ often results in the fastest solution time.  This mode is recommended   
+ if enough physical memory is present to accommodate all of the solver   
+ data.                                                                   
+ curEqn=  14819  totEqn=  14819 Job CP sec=      2.219
+      Factor Done= 100% Factor Wall sec=      0.266 rate=       9.3 GFlops
+ Distributed sparse solver maximum pivot= 13519521.7 at node 12486 UY.   
+ Distributed sparse solver minimum pivot= 12034.3029 at node 86 UZ.      
+ Distributed sparse solver minimum pivot in absolute value= 12034.3029   
+ at node 86 UZ.                                                          
+     DISP CONVERGENCE VALUE   =  0.2576E-02  CRITERION=  0.1288E-03
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2576E-02
+     DISP CONVERGENCE VALUE   =  0.2576E-02  CRITERION=  0.1288E-03
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.2576E-02
+     FORCE CONVERGENCE VALUE  =   18.53      CRITERION=  0.6068E-01
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1836E-02
+     DISP CONVERGENCE VALUE   =  0.1836E-02  CRITERION=  0.2206E-03
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.1836E-02
+     FORCE CONVERGENCE VALUE  =   10.45      CRITERION=  0.6071E-01
+    EQUIL ITER   3 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6026E-02
+     DISP CONVERGENCE VALUE   =  0.6026E-02  CRITERION=  0.5219E-03
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.6026E-02
+     FORCE CONVERGENCE VALUE  =   43.08      CRITERION=  0.6069E-01
+    EQUIL ITER   4 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2576E-01
+     DISP CONVERGENCE VALUE   =  0.2576E-01  CRITERION=  0.1810E-02
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.2576E-01
+     FORCE CONVERGENCE VALUE  =   64.54      CRITERION=  0.6070E-01
+    EQUIL ITER   5 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1138    
+     DISP CONVERGENCE VALUE   =  0.8677E-01  CRITERION=  0.6148E-02
+     LINE SEARCH PARAMETER =  0.7625     SCALED MAX DOF INC =  0.8677E-01
+     FORCE CONVERGENCE VALUE  =   83.65      CRITERION=  0.6071E-01
+    EQUIL ITER   6 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.3051E-02
+     DISP CONVERGENCE VALUE   =  0.3051E-02  CRITERION=  0.6183E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.3051E-02
+     FORCE CONVERGENCE VALUE  =   30.41      CRITERION=  0.6072E-01
+    EQUIL ITER   7 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1595E-02
+     DISP CONVERGENCE VALUE   =  0.1595E-02  CRITERION=  0.6224E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.1595E-02
+     FORCE CONVERGENCE VALUE  =   15.15      CRITERION=  0.7139E-01
+    EQUIL ITER   8 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.4585E-02
+     DISP CONVERGENCE VALUE   =  0.4585E-02  CRITERION=  0.6335E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.4585E-02
+     FORCE CONVERGENCE VALUE  =   3.291      CRITERION=  0.7285E-01
+    EQUIL ITER   9 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7451E-03
+     DISP CONVERGENCE VALUE   =  0.7451E-03  CRITERION=  0.6347E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.7451E-03
+     FORCE CONVERGENCE VALUE  =  0.2411      CRITERION=  0.1487    
+    EQUIL ITER  10 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5828E-03
+     DISP CONVERGENCE VALUE   =  0.5828E-03  CRITERION=  0.6348E-02 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.5828E-03
+     FORCE CONVERGENCE VALUE  =  0.1749E-01  CRITERION=  0.1517     <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION  10
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1       444  SOLID187      0.016   0.000035
+        2       444  SOLID187      0.016   0.000035
+        3       444  SOLID187      0.047   0.000106
+        4       444  SOLID187      0.031   0.000070
+        5       444  SOLID187      0.016   0.000035
+        6       444  SOLID187      0.047   0.000106
+        7      3510  SOLID187      0.172   0.000049
+        8      4323  SOLID187      0.203   0.000047
+        9       170  CONTA174      0.000   0.000000
+       11       170  CONTA174      0.000   0.000000
+       13       170  CONTA174      0.000   0.000000
+       15       170  CONTA174      0.000   0.000000
+       17       170  CONTA174      0.000   0.000000
+       19       170  CONTA174      0.000   0.000000
+       21       145  CONTA174      0.000   0.000000
+       23       147  CONTA174      0.000   0.000000
+       25       145  CONTA174      0.000   0.000000
+       27       147  CONTA174      0.000   0.000000
+       29       153  CONTA174      0.000   0.000000
+       31       153  CONTA174      0.000   0.000000
+       33        97  CONTA174      0.016   0.000161
+       35        99  CONTA174      0.000   0.000000
+       37        99  CONTA174      0.016   0.000158
+       39        97  CONTA174      0.000   0.000000
+       41        99  CONTA174      0.031   0.000316
+       43        99  CONTA174      0.000   0.000000
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1       444  SOLID187      0.000   0.000000
+        2       444  SOLID187      0.000   0.000000
+        3       444  SOLID187      0.000   0.000000
+        4       444  SOLID187      0.000   0.000000
+        5       444  SOLID187      0.000   0.000000
+        6       444  SOLID187      0.000   0.000000
+        7      3510  SOLID187      0.047   0.000013
+        8      4323  SOLID187      0.047   0.000011
+        9       170  CONTA174      0.000   0.000000
+       11       170  CONTA174      0.000   0.000000
+       13       170  CONTA174      0.000   0.000000
+       15       170  CONTA174      0.000   0.000000
+       17       170  CONTA174      0.000   0.000000
+       19       170  CONTA174      0.000   0.000000
+       21       145  CONTA174      0.000   0.000000
+       23       147  CONTA174      0.000   0.000000
+       25       145  CONTA174      0.000   0.000000
+       27       147  CONTA174      0.000   0.000000
+       29       153  CONTA174      0.000   0.000000
+       31       153  CONTA174      0.000   0.000000
+       33        97  CONTA174      0.000   0.000000
+       35        99  CONTA174      0.000   0.000000
+       37        99  CONTA174      0.000   0.000000
+       39        97  CONTA174      0.000   0.000000
+       41        99  CONTA174      0.000   0.000000
+       43        99  CONTA174      0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =     10
+ *** TIME =   1.00000         TIME INC =   1.00000    
+
+
+ *** MAPDL BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.312 MB WRITTEN ON ELEMENT MATRIX FILE: file0.emat
+       13.062 MB WRITTEN ON ELEMENT SAVED DATA FILE: file0.esav
+       11.500 MB WRITTEN ON ASSEMBLED MATRIX FILE: file0.full
+        2.500 MB WRITTEN ON RESULTS FILE: file0.rst
+ *************** Write FE CONNECTORS *********
+
+ WRITE OUT CONSTRAINT EQUATIONS TO FILE= file.ce                                                                                                                                                                                                                                                             
+ ****************************************************
+ *************** FINISHED SOLVE FOR LS 1 *************
+
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.1547222    
+
+ PRINTOUT RESUMED BY /GOP
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         8.703
+
+
+
+ *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
+ Ansys Mechanical Enterprise                       
+ 20120530  VERSION=WINDOWS x64   21:09:18  APR 12, 2024 CP=      8.703
+
+ ansys_1--____ (A5)                                                            
+
+
+
+          ***** MAPDL RESULTS INTERPRETATION (POST1) *****
+
+ *** NOTE ***                            CP =       8.703   TIME= 21:09:18
+ Reading results into the database (SET command) will update the current 
+ displacement and force boundary conditions in the database with the     
+ values from the results file for that load set.  Note that any          
+ subsequent solutions will use these values unless action is taken to    
+ either SAVE the current values or not overwrite them (/EXIT,NOSAVE).    
+
+ Set Encoding of XML File to:ISO-8859-1
+
+ Set Output of XML File to:
+     PARM,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,
+         ,     ,     ,     ,     ,     ,     ,
+
+ DATABASE WRITTEN ON FILE  parm.xml                                                                                                                                                                                                                                                            
+
+ EXIT THE MAPDL POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =         8.703
+
+
+
+ PRINTOUT RESUMED BY /GOP
+
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  21.1550000    
+
+ PARAMETER _PREPTIME =     1.000000000    
+
+ PARAMETER _SOLVTIME =     11.00000000    
+
+ PARAMETER _POSTTIME =     1.000000000    
+
+ PARAMETER _TOTALTIM =     13.00000000    
+
+ *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.01943780    
+
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.369797000E-01
+
+ *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
+
+ *GET  _NDOFS    FROM  ACTI  ITEM=SOLU NDOF  VALUE=  61677.0000    
+
+ *GET  _SOL_END_TIME  FROM  ACTI  ITEM=SET  TIME  VALUE=  1.00000000    
+
+ *IF  _sol_end_time                     ( =   1.00000     )  EQ  
+      1.000000                          ( =   1.00000     )  THEN    
+
+ /FCLEAN COMMAND REMOVING ALL LOCAL FILES
+
+ *ENDIF
+ --- Total number of nodes = 20803
+ --- Total number of elements = 15629
+ --- Element load balance ratio = 1.0194378
+ --- Time to combine distributed files = 3.69797E-02
+ --- Sparse memory mode = 2
+ --- Number of DOF = 61677
+
+ EXIT MAPDL WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          2
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- M A P D L   S T A T I S T I C S ------------------------+
+
+Release: 2023 R1            Build: 23.1       Update: UP20221128   Platform: WINDOWS x64 
+Date Run: 04/12/2024   Time: 21:09     Process ID: 14844
+Operating System: Windows 11  (Build: 22631)
+
+Processor Model: AMD Ryzen 7 5800H with Radeon Graphics
+
+Compiler: Intel(R) Fortran Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) C/C++ Compiler Version 19.0.5  (Build: 20190815)
+          Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191125
+          BLAS Library supplied by AMD BLIS
+
+Number of machines requested            :    1
+Total number of cores available         :   16
+Number of physical cores available      :    8
+Number of processes requested           :    4
+Number of threads per process requested :    1
+Total number of cores requested         :    4 (Distributed Memory Parallel)               
+MPI Type: INTELMPI
+MPI Version: Intel(R) MPI Library 2021.5 for Windows* OS
+
+
+GPU Acceleration: Not Requested
+
+Job Name: file0
+Input File: dummy.dat
+
+  Core                Machine Name   Working Directory
+ -----------------------------------------------------
+     0             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3
+     1             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3
+     2             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3
+     3             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3
+ 
+Latency time from master to core     1 =    5.940 microseconds
+Latency time from master to core     2 =    6.079 microseconds
+Latency time from master to core     3 =    5.877 microseconds
+ 
+Communication speed from master to core     1 =  7827.10 MB/sec
+Communication speed from master to core     2 = 11208.25 MB/sec
+Communication speed from master to core     3 = 10219.20 MB/sec
+
+Total CPU time for main thread                    :        8.1 seconds
+Total CPU time summed for all threads             :        8.8 seconds
+
+Elapsed time spent obtaining a license            :        0.4 seconds
+Elapsed time spent pre-processing model (/PREP7)  :        0.2 seconds
+Elapsed time spent solution - preprocessing       :        0.5 seconds
+Elapsed time spent computing solution             :       11.2 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+Equation solver computational rate                :       44.3 Gflops
+
+Sum of memory used on all processes               :      657.0 MB
+Sum of memory allocated on all processes          :     5184.0 MB
+Physical memory available                         :         15 GB
+
+Total amount of I/O written to disk               :        0.7 GB
+Total amount of I/O read from disk                :        3.2 GB
+
++------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
+
+
+ *-----------------------------------------------------------------------------*
+ |                                                                             |
+ |                               RUN COMPLETED                                 |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Ansys MAPDL 2023 R1         Build 23.1         UP20221128    WINDOWS x64   |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |  Database Requested(-db)     1024 MB     Scratch Memory Requested   1024 MB |
+ |  Max Database Used(Master)     21 MB     Max Scratch Used(Master)    170 MB |
+ |  Max Database Used(Workers)     1 MB     Max Scratch Used(Workers)   156 MB |
+ |  Sum Database Used(All)        24 MB     Sum Scratch Used(All)       633 MB |
+ |                                                                             |
+ |-----------------------------------------------------------------------------|
+ |                                                                             |
+ |        CP Time      (sec) =          8.844       Time  =  21:09:18          |
+ |        Elapsed Time (sec) =         14.000       Date  =  04/12/2024        |
+ |                                                                             |
+ *-----------------------------------------------------------------------------*

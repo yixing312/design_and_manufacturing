@@ -24,7 +24,7 @@ def write_task_queue(Task_queue):
     # 给每个任务新建文件夹
     for task in Task_queue:
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
-        data_path = Data_path + "Ansys/" + task_str
+        data_path = Data_path + "Ansys_data/" + task_str
         os.makedirs(data_path)
     # 每个任务占据一行内容
     with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
@@ -73,7 +73,7 @@ def get_concentricity(data_all):
 
 
 def get_ansys(task):
-    data_path = Data_path + "Ansys/" + str(task)
+    data_path = Data_path + "Ansys_data/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -86,9 +86,9 @@ def get_ansys(task):
 
 def plan_task(Ansys_ans, Task_stack, Bounds):
     # !随机获取一个任务，无所谓历史任务
-    task_list = random_task(Ansys_ans, Task_stack, Bounds)
+    # task_list = random_task(Ansys_ans, Task_stack, Bounds)
     # # !随机获取一个任务队列，数量随机
-    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
+    task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
     # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
@@ -104,7 +104,7 @@ def Init_task(Bounds):
 
 
 def print_ansys(task):
-    data_path = Data_path + "Ansys/" + str(task)
+    data_path = Data_path + "Ansys_data/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:

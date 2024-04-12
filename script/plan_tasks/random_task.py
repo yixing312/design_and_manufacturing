@@ -11,7 +11,7 @@ def random_task(_Ansys_ans, _Task_stack, bounds):
 
 def random_tasks(_Ansys_ans, _Task_stack, bounds):
     # 随机获得一个整数
-    random_num = np.random.randint(1, 10)
+    random_num = np.random.randint(2, 3)
     task_queue = []
     for _ in range(random_num):
         task_queue.append(random_task(_Ansys_ans, _Task_stack, bounds))
