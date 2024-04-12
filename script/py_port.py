@@ -116,7 +116,6 @@ def print_ansys(task):
 
 
 if __name__ == "__main__":
-    global Data_path
     # ! 扭矩边界
     bounds = [
         [4, 4, 4, 4, 4, 4],
