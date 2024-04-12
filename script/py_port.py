@@ -167,6 +167,9 @@ if __name__ == "__main__":
             break
         epoch -= 1
 
+    with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
+        f.write("end")
+
     print("任务队列已经完成！")
     with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
         for i, j in zip(task_stack, ansys_ans):
