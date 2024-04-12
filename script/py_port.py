@@ -8,6 +8,7 @@ from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
 
 from plan_tasks.random_task import random_task
+from plan_tasks.random_task import random_tasks
 from plan_tasks.simulated_annealing import simulated_annealing
 from plan_tasks.gradient_descent import gradient_descent
 
@@ -22,12 +23,15 @@ def write_task_queue(Task_queue):
     global Data_path
     # 给每个任务新建文件夹
     for task in Task_queue:
-        data_path = Data_path + "Ansys/" + str(task)
+        task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
+        data_path = Data_path + "Ansys/" + task_str
         os.makedirs(data_path)
     # 每个任务占据一行内容
     with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
         for task in Task_queue:
-            f.write(str(task) + "\n")
+            # 将task写入文件，采用逗号隔开
+            task_str = ",".join([str(i) for i in task])
+            f.write(task_str + "\n")
 
 
 def get_concentricity(data_all):
@@ -83,6 +87,8 @@ def get_ansys(task):
 def plan_task(Ansys_ans, Task_stack, Bounds):
     # !随机获取一个任务，无所谓历史任务
     task_list = random_task(Ansys_ans, Task_stack, Bounds)
+    # # !随机获取一个任务队列，数量随机
+    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
     # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
