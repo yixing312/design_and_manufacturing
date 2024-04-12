@@ -1,7 +1,7 @@
 import numpy as np
 
-Learning_rate = 0.01
-Epsilon = 1e-4
+Learning_rate = 0.05
+Epsilon = 5
 limit_gard = 1e-4
 
 
@@ -17,10 +17,10 @@ def gradient_descent(_Ansys_ans, _Task_stack, bounds):
         return generate_perturbed_tasks(_Task_stack[-1], bounds, Epsilon)
 
     gard = approximate_gradient(_Ansys_ans[-12:], Epsilon)
-    if np.all(np.abs(gard) < limit_gard):
-        return []
+    # if np.all(np.abs(gard) < limit_gard):
+    #     return []
 
-    new_task = _Task_stack[-13] - Learning_rate * gard
+    new_task = _Task_stack[-13] - [i*Learning_rate for i in gard]
     new_task = np.clip(new_task, bounds[0], bounds[1])
 
     new_tasks = [new_task]
@@ -51,7 +51,7 @@ def generate_perturbed_tasks(task, bounds, epsilon):
         task_minus[i] -= epsilon
         task_plus = np.clip(task_plus, bounds[0], bounds[1])
         task_minus = np.clip(task_minus, bounds[0], bounds[1])
-        perturbed_tasks.extend(task_plus)
-        perturbed_tasks.extend(task_minus)
+        perturbed_tasks.append(task_plus)
+        perturbed_tasks.append(task_minus)
 
     return perturbed_tasks

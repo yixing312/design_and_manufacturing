@@ -11,6 +11,7 @@ from plan_tasks.random_task import random_task
 from plan_tasks.random_task import random_tasks
 from plan_tasks.simulated_annealing import simulated_annealing
 from plan_tasks.gradient_descent import gradient_descent
+from plan_tasks.linearity import linear
 
 
 Data_path = "../data/"
@@ -65,7 +66,7 @@ def get_concentricity(data_all):
     hull = ConvexHull(points)
     hull_points3 = points[hull.vertices]
     hull_points = np.concatenate((hull_points1, hull_points2, hull_points3))
-    center = (0, 120)
+    center = (2.033, 120)
     r = np.linalg.norm(hull_points - center, axis=1)
     max_radius = np.max(r)
     min_radius = np.min(r)
@@ -91,9 +92,12 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     # # !随机获取一个任务队列，数量随机
     # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
-    task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
+    # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
-    # task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
+    task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
+    # # !线性插值，每次迭代生成10个任务
+    # task_list = linear(Ansys_ans, Task_stack, Bounds)
+    # print(task_list)
     return task_list
 
 
@@ -126,7 +130,7 @@ if __name__ == "__main__":
     # ]
     # ! 施力边界
     bounds = [
-        [2500, 2500, 2500, 2500, 2500, 2500],
+        [1000, 1000, 1000, 1000, 1000, 1000],
         [5000, 5000, 5000, 5000, 5000, 5000],
     ]
     task_queue = Init_task(bounds)  # 生成任务队列
@@ -138,7 +142,7 @@ if __name__ == "__main__":
     ansys_ans = []
     task_stack = []
     print_stack = []
-    epoch = 20
+    epoch = 60
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
@@ -183,6 +187,12 @@ if __name__ == "__main__":
         print_ansys(i)
 
     print("任务队列已经完成！")
-    with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
-        for i, j in zip(task_stack, ansys_ans):
-            f.write(str(i) + " " + str(j) + "\n")
+
+    os.mkdir(Data_path+exp_name)
+    with open(Data_path + exp_name + "/task.txt", "w", encoding="utf8") as f:
+        for i in task_stack:
+            f.write(str(i)  + "\n")
+
+    with open(Data_path + exp_name + "/ans.txt", "w", encoding="utf8") as f:
+        for j in ansys_ans:
+            f.write( str(j) + "\n")
