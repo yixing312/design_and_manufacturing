@@ -42,6 +42,7 @@ def simulated_annealing(_Ansys_ans, _Task_stack, bounds):
     new_task = currect_task + np.random.randn(6) * (current_temperature**0.5)
     new_task = np.clip(new_task, bounds[0], bounds[1])
 
+    new_task = [new_task]
     # 冷却
     current_temperature *= 1 - Cooling_rate
 

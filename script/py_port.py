@@ -24,6 +24,7 @@ def write_task_queue(Task_queue):
     # 给每个任务新建文件夹
     for task in Task_queue:
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
+        print("任务：", task_str)
         data_path = Data_path + "Ansys_data/" + task_str
         os.makedirs(data_path)
     # 每个任务占据一行内容
@@ -85,12 +86,12 @@ def get_ansys(task):
 
 
 def plan_task(Ansys_ans, Task_stack, Bounds):
-    # !随机获取一个任务，无所谓历史任务
+    # # !随机获取一个任务，无所谓历史任务
     # task_list = random_task(Ansys_ans, Task_stack, Bounds)
     # # !随机获取一个任务队列，数量随机
-    task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
+    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
-    # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
+    task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
     # task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
     return task_list
@@ -100,7 +101,7 @@ def Init_task(Bounds):
     # !随机获取一个任务，无所谓历史任务
     task_list = random_task([], [], Bounds)
     # # !随机获取一个任务队列，数量随机
-    task_list = random_tasks([], [], Bounds)
+    # task_list = random_tasks([], [], Bounds)
     # # !其他初始化方法
     return task_list
 
@@ -119,25 +120,25 @@ def print_ansys(task):
 
 if __name__ == "__main__":
     # ! 扭矩边界
-    bounds = [
-        [4, 4, 4, 4, 4, 4],
-        [6, 6, 6, 6, 6, 6],
-    ]
-    # ! 施力边界
     # bounds = [
-    #     [2500, 2500, 2500, 2500, 2500, 2500],
-    #     [5000, 5000, 5000, 5000, 5000, 5000],
+    #     [4, 4, 4, 4, 4, 4],
+    #     [6, 6, 6, 6, 6, 6],
     # ]
+    # ! 施力边界
+    bounds = [
+        [2500, 2500, 2500, 2500, 2500, 2500],
+        [5000, 5000, 5000, 5000, 5000, 5000],
+    ]
     task_queue = Init_task(bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
 
-    exp_name = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    exp_name = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
 
     # 读取数据
     ansys_ans = []
     task_stack = []
-    print_queue = []
-    epoch = 10
+    print_stack = []
+    epoch = 20
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
@@ -147,7 +148,7 @@ if __name__ == "__main__":
         for i in task_queue:
             ansys_ans.append(get_ansys(i))
             task_stack.append(i)
-            print_queue.append(i)
+            print_stack.append(i)
 
         # 根据 ansys_ans 的结果和 task_stack 的任务
         # TODO 任务规划算法
@@ -156,15 +157,30 @@ if __name__ == "__main__":
         write_task_queue(task_queue)
 
         # 此时空闲下来，完成绘图工作
-        for i in print_queue:
-            print_ansys(i)
 
         if not task_queue:
             break
 
+        epoch -= 1
         if epoch == 0:
             break
-        epoch -= 1
+
+    while 1:
+        if os.path.exists(Data_path + "task_queue.txt"):
+            # print("任务队列文件存在！")
+            time.sleep(1)
+            continue
+        for i in task_queue:
+            ansys_ans.append(get_ansys(i))
+            task_stack.append(i)
+            print_stack.append(i)
+        with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
+            f.write("end")
+
+            break
+
+    for i in print_stack:
+        print_ansys(i)
 
     print("任务队列已经完成！")
     with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
