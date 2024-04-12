@@ -73,7 +73,7 @@ def get_concentricity(data_all):
 
 
 def get_ansys(task):
-    data_path = Data_path + "Ansys/" + str(task)
+    data_path = Data_path + "Ansys/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -104,7 +104,7 @@ def Init_task(Bounds):
 
 
 def print_ansys(task):
-    data_path = Data_path + "Ansys/" + str(task)
+    data_path = Data_path + "Ansys/" + ",".join([str(i) for i in task])
     file_list = [file for file in os.listdir(data_path) if file.endswith(".txt")]
     data_all = {}
     for file in file_list:
@@ -137,6 +137,7 @@ if __name__ == "__main__":
     ansys_ans = []
     task_stack = []
     print_queue = []
+    epoch = 10
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
@@ -161,6 +162,10 @@ if __name__ == "__main__":
 
         if task_queue == []:
             break
+
+        if epoch == 0:
+            break
+        epoch -= 1
 
     print("任务队列已经完成！")
     with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
