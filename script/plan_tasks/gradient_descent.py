@@ -1,6 +1,6 @@
 import numpy as np
 
-Learning_rate = 2*1e7
+Learning_rate = 2 * 1e7
 Epsilon = 5
 limit_gard = 1e-4
 

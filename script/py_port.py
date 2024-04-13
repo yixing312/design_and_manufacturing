@@ -149,18 +149,23 @@ if __name__ == "__main__":
     task_queue = Init_task(bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
 
+    start_time = time.time()
+    end_time = time.time()
     exp_name = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
 
     # 读取数据
     ansys_ans = []
     task_stack = []
     print_stack = []
-    epoch = 60
+    time_stack = []
+    epoch = 10
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
             time.sleep(1)
             continue
+        end_time = time.time()
+        time_stack.append(end_time - start_time)
         print("任务队列已经完成，规划新任务")
         for i in task_queue:
             ansys_ans.append(get_ansys(i))
@@ -172,7 +177,7 @@ if __name__ == "__main__":
         task_queue = plan_task(ansys_ans, task_stack, bounds)
         # 写入新的任务队列
         write_task_queue(task_queue)
-
+        start_time = time.time()
         # 此时空闲下来，完成绘图工作
 
         if task_queue.size == 0:
@@ -187,6 +192,8 @@ if __name__ == "__main__":
             # print("任务队列文件存在！")
             time.sleep(1)
             continue
+        end_time = time.time()
+        time_stack.append(end_time - start_time)
         for i in task_queue:
             ansys_ans.append(get_ansys(i))
             task_stack.append(i)

@@ -141,6 +141,7 @@ def get_anays_ans(fig, data_all):
     hull = ConvexHull(points)
     hull_points1 = points[hull.vertices]
     center = np.mean(hull_points1, axis=0)
+    print(center)
     radii = np.linalg.norm(hull_points1 - center, axis=1)
     max_radius = np.max(radii)
     min_radius = np.min(radii)
@@ -157,6 +158,7 @@ def get_anays_ans(fig, data_all):
     hull = ConvexHull(points)
     hull_points2 = points[hull.vertices]
     center = np.mean(hull_points2, axis=0)
+    print(center)
     radii = np.linalg.norm(hull_points2 - center, axis=1)
     max_radius = np.max(radii)
     min_radius = np.min(radii)
@@ -173,6 +175,7 @@ def get_anays_ans(fig, data_all):
     hull = ConvexHull(points)
     hull_points2 = points[hull.vertices]
     center = np.mean(hull_points2, axis=0)
+    print(center)
     radii = np.linalg.norm(hull_points2 - center, axis=1)
     max_radius = np.max(radii)
     min_radius = np.min(radii)
