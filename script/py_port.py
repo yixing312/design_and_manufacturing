@@ -132,45 +132,64 @@ if __name__ == "__main__":
     task_queue = Init_task(bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
 
-    exp_name = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    start_time = time.time()
+    end_time = time.time()
+    exp_name = time.strftime("%Y-%m-%d %H_%M_%S", time.localtime())
 
     # 读取数据
     ansys_ans = []
     task_stack = []
-    print_queue = []
+    print_stack = []
+    time_stack = []
     epoch = 10
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
             time.sleep(1)
             continue
+        end_time = time.time()
+        time_stack.append(end_time - start_time)
         print("任务队列已经完成，规划新任务")
         for i in task_queue:
             ansys_ans.append(get_ansys(i))
             task_stack.append(i)
-            print_queue.append(i)
+            print_stack.append(i)
 
         # 根据 ansys_ans 的结果和 task_stack 的任务
         # TODO 任务规划算法
         task_queue = plan_task(ansys_ans, task_stack, bounds)
         # 写入新的任务队列
         write_task_queue(task_queue)
-
+        start_time = time.time()
         # 此时空闲下来，完成绘图工作
-        for i in print_queue:
-            print_ansys(i)
 
         if not task_queue:
             break
 
+        epoch -= 1
         if epoch == 0:
             break
-        epoch -= 1
 
-    with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
-        f.write("end")
+    while 1:
+        if os.path.exists(Data_path + "task_queue.txt"):
+            # print("任务队列文件存在！")
+            time.sleep(1)
+            continue
+        end_time = time.time()
+        time_stack.append(end_time - start_time)
+        for i in task_queue:
+            ansys_ans.append(get_ansys(i))
+            task_stack.append(i)
+            print_stack.append(i)
+        with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
+            f.write("end")
+
+            break
+
+    for i in print_stack:
+        print_ansys(i)
 
     print("任务队列已经完成！")
     with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
-        for i, j in zip(task_stack, ansys_ans):
-            f.write(str(i) + " " + str(j) + "\n")
+        for i, j, k in zip(task_stack, ansys_ans, time_stack):
+            f.write(str(i) + " " + str(j) + " " + str(k) + "\n")

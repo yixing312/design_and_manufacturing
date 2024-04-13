@@ -1,7 +1,7 @@
 import numpy as np
 
 Learning_rate = 0.01
-Epsilon = 1e-4
+Epsilon = 5
 limit_gard = 1e-4
 
 
@@ -51,7 +51,7 @@ def generate_perturbed_tasks(task, bounds, epsilon):
         task_minus[i] -= epsilon
         task_plus = np.clip(task_plus, bounds[0], bounds[1])
         task_minus = np.clip(task_minus, bounds[0], bounds[1])
-        perturbed_tasks.extend(task_plus)
-        perturbed_tasks.extend(task_minus)
+        perturbed_tasks.append(task_plus)
+        perturbed_tasks.append(task_minus)
 
     return perturbed_tasks
