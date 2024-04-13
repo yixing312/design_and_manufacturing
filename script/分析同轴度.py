@@ -180,7 +180,7 @@ def get_anays_ans(fig, data_all):
     fig.text(0.7, 0.15, f"Roundness3: {roundness3:.3f}", fontsize=12)
 
     hull_points = np.concatenate((hull_points1, hull_points2, hull_points2))
-    center = (0, 120)
+    center = (2.033, 120)
     r = np.linalg.norm(hull_points - center, axis=1)
     max_radius = np.max(r)
     min_radius = np.min(r)
@@ -228,3 +228,4 @@ if __name__ == "__main__":
         print("读取文件：", file, "成功！")
     print_all(data_all)
     plt.savefig(data_path + "/output.png")
+    plt.close()

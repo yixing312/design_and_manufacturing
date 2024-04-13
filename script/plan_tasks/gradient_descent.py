@@ -1,6 +1,6 @@
 import numpy as np
 
-Learning_rate = 0.05
+Learning_rate = 2*1e7
 Epsilon = 5
 limit_gard = 1e-4
 
@@ -20,7 +20,7 @@ def gradient_descent(_Ansys_ans, _Task_stack, bounds):
     # if np.all(np.abs(gard) < limit_gard):
     #     return []
 
-    new_task = _Task_stack[-13] - [i*Learning_rate for i in gard]
+    new_task = _Task_stack[-13] - [i * Learning_rate for i in gard]
     new_task = np.clip(new_task, bounds[0], bounds[1])
 
     new_tasks = [new_task]

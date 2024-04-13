@@ -111,13 +111,13 @@
   DISTRIBUTED MEMORY PARALLEL REQUESTED
        4 PARALLEL PROCESSES REQUESTED WITH SINGLE THREAD PER PROCESS
     TOTAL OF     4 CORES REQUESTED
-  INPUT FILE NAME              = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B\dummy.dat
-  OUTPUT FILE NAME             = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B\solve.out
+  INPUT FILE NAME              = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63\dummy.dat
+  OUTPUT FILE NAME             = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63\solve.out
   START-UP FILE MODE           = NOREAD
   STOP FILE MODE               = NOREAD
 
  RELEASE= 2023 R1              BUILD= 23.1      UP20221128   VERSION=WINDOWS x64 
- CURRENT JOBNAME=file0  02:58:41  APR 13, 2024 CP=      0.000
+ CURRENT JOBNAME=file0  19:47:13  APR 13, 2024 CP=      0.016
 
 
  PARAMETER _DS_PROGRESS =     999.0000000    
@@ -126,11 +126,11 @@
 
 
 
- *** NOTE ***                            CP =       0.000   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.047   TIME= 19:47:14
  The /CONFIG,NOELDB command is not valid in a distributed memory         
  parallel solution.  Command is ignored.                                 
 
- *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  2.97805556    
+ *GET  _WALLSTRT  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.7872222    
 
  TITLE= 
  ansys_1--____ (A5)                                                            
@@ -145,7 +145,7 @@
  SET PARAMETER DIMENSIONS ON  _WB_PROJECTSCRATCH_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
 
- PARAMETER _WB_PROJECTSCRATCH_DIR(1) = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B\
+ PARAMETER _WB_PROJECTSCRATCH_DIR(1) = E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63\
 
  SET PARAMETER DIMENSIONS ON  _WB_SOLVERFILES_DIR
   TYPE=STRI  DIMENSIONS=      248        1        1
@@ -171,7 +171,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   02:58:41  APR 13, 2024 CP=      0.000
+ 20120530  VERSION=WINDOWS x64   19:47:14  APR 13, 2024 CP=      0.047
 
  ansys_1--____ (A5)                                                            
 
@@ -279,7 +279,7 @@
   CREATE COMPONENT CMNBOLT  FROM PRETENSION NODES
 
 
- ***** ROUTINE COMPLETED *****  CP =         0.078
+ ***** ROUTINE COMPLETED *****  CP =         0.438
 
 
  --- Number of total nodes = 20803
@@ -290,7 +290,7 @@
  --- Number of condensed parts = 0
  --- Number of total elements = 15629
 
- *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  2.97805556    
+ *GET  _WALLBSOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.7872222    
  ****************************************************************************
  *************************    SOLUTION       ********************************
  ****************************************************************************
@@ -324,22 +324,22 @@
  PRINTOUT RESUMED BY /GOP
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20666 TO    20666 BY        1
-  REAL=  4598.30945       IMAG=  0.00000000    
+  REAL=  2829.76739       IMAG=  0.00000000    
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20667 TO    20667 BY        1
-  REAL=  1529.89873       IMAG=  0.00000000    
+  REAL=  3059.68613       IMAG=  0.00000000    
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20668 TO    20668 BY        1
-  REAL=  3066.69992       IMAG=  0.00000000    
+  REAL=  3889.85464       IMAG=  0.00000000    
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20669 TO    20669 BY        1
-  REAL=  2729.44845       IMAG=  0.00000000    
+  REAL=  1102.10493       IMAG=  0.00000000    
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20670 TO    20670 BY        1
-  REAL=  2098.42741       IMAG=  0.00000000    
+  REAL=  3365.09757       IMAG=  0.00000000    
 
  SPECIFIED NODAL LOAD FX   FOR SELECTED NODES     20671 TO    20671 BY        1
-  REAL=  1325.42516       IMAG=  0.00000000    
+  REAL=  2438.57322       IMAG=  0.00000000    
 
  USE AUTOMATIC TIME STEPPING THIS LOAD STEP
 
@@ -390,21 +390,21 @@
 
  *ENDIF
 
- *** NOTE ***                            CP =       0.078   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.500   TIME= 19:47:14
  The automatic domain decomposition logic has selected the MESH domain   
  decomposition method with 4 processes per solution.                     
 
  *****  MAPDL SOLVE    COMMAND  *****
 
- *** WARNING ***                         CP =       0.078   TIME= 02:58:41
+ *** WARNING ***                         CP =       0.500   TIME= 19:47:14
  Element shape checking is currently inactive.  Issue SHPP,ON or         
  SHPP,WARN to reactivate, if desired.                                    
 
- *** NOTE ***                            CP =       0.078   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.500   TIME= 19:47:14
  The model data was checked and warning messages were found.             
   Please review output or errors file (                                  
  E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr 
- rDC6B\file0.err ) for these warning messages.                           
+ r6E63\file0.err ) for these warning messages.                           
 
  *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
       --- GIVE SUGGESTIONS AND RESET THE KEY OPTIONS ---
@@ -437,7 +437,7 @@
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   02:58:41  APR 13, 2024 CP=      0.078
+ 20120530  VERSION=WINDOWS x64   19:47:14  APR 13, 2024 CP=      0.500
 
  ansys_1--____ (A5)                                                            
 
@@ -453,22 +453,22 @@
    NEWTON-RAPHSON OPTION . . . . . . . . . . . . .PROGRAM CHOSEN   
    GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
 
- *** WARNING ***                         CP =       0.078   TIME= 02:58:41
+ *** WARNING ***                         CP =       0.500   TIME= 19:47:14
  Material number 45 (used by element 21640) should normally have at      
  least one MP or one TB type command associated with it.  Output of      
  energy by material may not be available.                                
 
- *** NOTE ***                            CP =       0.078   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.500   TIME= 19:47:14
  The step data was checked and warning messages were found.              
   Please review output or errors file (                                  
  E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr 
- rDC6B\file0.err ) for these warning messages.                           
+ r6E63\file0.err ) for these warning messages.                           
 
- *** NOTE ***                            CP =       0.078   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.500   TIME= 19:47:14
  This nonlinear analysis defaults to using the full Newton-Raphson       
  solution procedure.  This can be modified using the NROPT command.      
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 9 and contact element type 9 has been set up.  The         
  companion pair has real constant set ID 10.  Both pairs should have     
@@ -495,13 +495,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 16685 and target element 16863.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 10 and contact element type 9 has been set up.  The        
  companion pair has real constant set ID 9.  Both pairs should have the  
@@ -528,13 +528,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 16725 and target element 16647.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 11 and contact element type 11 has been set up.  The       
  companion pair has real constant set ID 12.  Both pairs should have     
@@ -561,13 +561,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 1.421085472E-14 was detected between contact  
  element 17020 and target element 17199.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 12 and contact element type 11 has been set up.  The       
  companion pair has real constant set ID 11.  Both pairs should have     
@@ -594,13 +594,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 17084 and target element 16982.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 13 and contact element type 13 has been set up.  The       
  companion pair has real constant set ID 14.  Both pairs should have     
@@ -627,13 +627,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 17365 and target element 17546.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 14 and contact element type 13 has been set up.  The       
  companion pair has real constant set ID 13.  Both pairs should have     
@@ -660,13 +660,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 17409 and target element 17342.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 15 and contact element type 15 has been set up.  The       
  companion pair has real constant set ID 16.  Both pairs should have     
@@ -693,13 +693,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 17685 and target element 17897.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 16 and contact element type 15 has been set up.  The       
  companion pair has real constant set ID 15.  Both pairs should have     
@@ -726,13 +726,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 17757 and target element 17663.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 17 and contact element type 17 has been set up.  The       
  companion pair has real constant set ID 18.  Both pairs should have     
@@ -759,13 +759,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 18032 and target element 18255.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 18 and contact element type 17 has been set up.  The       
  companion pair has real constant set ID 17.  Both pairs should have     
@@ -792,13 +792,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 18082 and target element 18001.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 19 and contact element type 19 has been set up.  The       
  companion pair has real constant set ID 20.  Both pairs should have     
@@ -825,13 +825,13 @@
  The resulting pinball region                 0.86218    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 18366 and target element 18549.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 20 and contact element type 19 has been set up.  The       
  companion pair has real constant set ID 19.  Both pairs should have     
@@ -858,13 +858,13 @@
  The resulting pinball region                  5.5831    
  *WARNING*: Initial penetration is included.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 7.105427358E-15 was detected between contact  
  element 18403 and target element 18342.                                 
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 21 and contact element type 21 has been set up.  The       
  companion pair has real constant set ID 22.  Both pairs should have     
@@ -893,13 +893,13 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0 was detected between contact element 18750  
  and target element 18895.                                               
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 22 and contact element type 21 has been set up.  The       
  companion pair has real constant set ID 21.  Both pairs should have     
@@ -928,13 +928,13 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0 was detected between contact element 18820  
  and target element 18709.                                               
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 23 and contact element type 23 has been set up.  The       
  companion pair has real constant set ID 24.  Both pairs should have     
@@ -963,7 +963,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.108 was detected between contact element 19049 and  
  target element 19233.                                                   
  You may move entire target surface by: x= 3.850013488E-16, y= -0.108,   
@@ -971,7 +971,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 24 and contact element type 23 has been set up.  The       
  companion pair has real constant set ID 23.  Both pairs should have     
@@ -1000,7 +1000,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.108 was detected between contact element 19124 and  
  target element 18985.                                                   
  You may move entire target surface by: x= -1.058616052E-17, y= 0.108,   
@@ -1008,7 +1008,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 25 and contact element type 25 has been set up.  The       
  companion pair has real constant set ID 26.  Both pairs should have     
@@ -1037,7 +1037,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.128 was detected between contact element 19350 and  
  target element 19488.                                                   
  You may move entire target surface by: x= 0, y= -0.128, z= 0, to bring  
@@ -1045,7 +1045,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 26 and contact element type 25 has been set up.  The       
  companion pair has real constant set ID 25.  Both pairs should have     
@@ -1074,7 +1074,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.128 was detected between contact element 19408 and  
  target element 19285.                                                   
  You may move entire target surface by: x= 0, y= 0.128, z= 0, to bring   
@@ -1082,7 +1082,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 27 and contact element type 27 has been set up.  The       
  companion pair has real constant set ID 28.  Both pairs should have     
@@ -1111,7 +1111,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.152 was detected between contact element 19657 and  
  target element 19778.                                                   
  You may move entire target surface by: x= 0, y= -0.152, z= 0, to bring  
@@ -1119,7 +1119,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 28 and contact element type 27 has been set up.  The       
  companion pair has real constant set ID 27.  Both pairs should have     
@@ -1148,7 +1148,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.152 was detected between contact element 19717 and  
  target element 19610.                                                   
  You may move entire target surface by: x= 0, y= 0.152, z= 0, to bring   
@@ -1156,7 +1156,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 29 and contact element type 29 has been set up.  The       
  companion pair has real constant set ID 30.  Both pairs should have     
@@ -1185,7 +1185,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.161 was detected between contact element 19926 and  
  target element 20077.                                                   
  You may move entire target surface by: x= 0, y= -0.161, z= 0, to bring  
@@ -1193,7 +1193,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 30 and contact element type 29 has been set up.  The       
  companion pair has real constant set ID 29.  Both pairs should have     
@@ -1222,7 +1222,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.161 was detected between contact element 20036 and  
  target element 19875.                                                   
  You may move entire target surface by: x= 0, y= 0.161, z= 0, to bring   
@@ -1230,7 +1230,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 31 and contact element type 31 has been set up.  The       
  companion pair has real constant set ID 32.  Both pairs should have     
@@ -1259,7 +1259,7 @@
  User defined pinball region PINB             0.40000    
  Incorrect contact offset is defined. Check the sign for CNOF.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.188 was detected between contact element 20228 and  
  target element 20394.                                                   
  You may move entire target surface by: x= -1.588873025E-17, y= -0.188,  
@@ -1267,7 +1267,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 32 and contact element type 31 has been set up.  The       
  companion pair has real constant set ID 31.  Both pairs should have     
@@ -1296,7 +1296,7 @@
  User defined pinball region PINB             0.40000    
  Incorrect contact offset is defined. Check the sign for CNOF.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Min.  Initial gap 0.188 was detected between contact element 20308 and  
  target element 20164.                                                   
  You may move entire target surface by: x= 0, y= 0.188, z= 0, to bring   
@@ -1304,7 +1304,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 33 and contact element type 33 has been set up.  The       
  companion pair has real constant set ID 34.  Both pairs should have     
@@ -1335,7 +1335,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.720175752 was detected between contact      
  element 20565 and target element 20649.                                 
  You may move entire target surface by : x= 0.266448058, y=              
@@ -1346,7 +1346,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 34 and contact element type 33 has been set up.  The       
  companion pair has real constant set ID 33.  Both pairs should have     
@@ -1374,7 +1374,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.736885432 was detected between contact      
  element 20627 and target element 20491.                                 
  You may move entire target surface by : x= -8.181940957E-03, y= 0, z=   
@@ -1385,7 +1385,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 35 and contact element type 35 has been set up.  The       
  companion pair has real constant set ID 36.  Both pairs should have     
@@ -1416,7 +1416,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.71864827 was detected between contact       
  element 20796 and target element 20841.                                 
  You may move entire target surface by : x= -0.656886197, y=             
@@ -1427,7 +1427,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 36 and contact element type 35 has been set up.  The       
  companion pair has real constant set ID 35.  Both pairs should have     
@@ -1455,7 +1455,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.903750595 was detected between contact      
  element 20813 and target element 20661.                                 
  You may move entire target surface by : x= 0.756136652, y= 0.219281942, 
@@ -1466,7 +1466,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 37 and contact element type 37 has been set up.  The       
  companion pair has real constant set ID 38.  Both pairs should have     
@@ -1497,7 +1497,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.636484745 was detected between contact      
  element 20959 and target element 21042.                                 
  You may move entire target surface by : x= 0.168295493, y=              
@@ -1508,7 +1508,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 38 and contact element type 37 has been set up.  The       
  companion pair has real constant set ID 37.  Both pairs should have     
@@ -1536,7 +1536,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.834387356 was detected between contact      
  element 21018 and target element 20884.                                 
  You may move entire target surface by : x= -0.494979344, y=             
@@ -1547,7 +1547,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 39 and contact element type 39 has been set up.  The       
  companion pair has real constant set ID 40.  Both pairs should have     
@@ -1578,7 +1578,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.711870264 was detected between contact      
  element 21194 and target element 21226.                                 
  You may move entire target surface by : x= -0.544572378, y=             
@@ -1589,7 +1589,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 40 and contact element type 39 has been set up.  The       
  companion pair has real constant set ID 39.  Both pairs should have     
@@ -1617,7 +1617,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.86863053 was detected between contact       
  element 21202 and target element 21071.                                 
  You may move entire target surface by : x= -0.512154252, y=             
@@ -1628,7 +1628,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 41 and contact element type 41 has been set up.  The       
  companion pair has real constant set ID 42.  Both pairs should have     
@@ -1659,7 +1659,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.683575192 was detected between contact      
  element 21358 and target element 21437.                                 
  You may move entire target surface by : x= -0.255760799, y=             
@@ -1670,7 +1670,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 42 and contact element type 41 has been set up.  The       
  companion pair has real constant set ID 41.  Both pairs should have     
@@ -1698,7 +1698,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.714791011 was detected between contact      
  element 21414 and target element 21285.                                 
  You may move entire target surface by : x= -0.193961011, y=             
@@ -1709,7 +1709,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 43 and contact element type 43 has been set up.  The       
  companion pair has real constant set ID 44.  Both pairs should have     
@@ -1740,7 +1740,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.688490571 was detected between contact      
  element 21568 and target element 21635.                                 
  You may move entire target surface by : x= -0.673161518, y=             
@@ -1751,7 +1751,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 44 and contact element type 43 has been set up.  The       
  companion pair has real constant set ID 43.  Both pairs should have     
@@ -1782,7 +1782,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.172   TIME= 02:58:41
+ *** NOTE ***                            CP =       0.953   TIME= 19:47:14
  Max.  Initial penetration 0.576371648 was detected between contact      
  element 21608 and target element 21449.                                 
  You may move entire target surface by : x= 0.420245362, y=              
@@ -1836,14 +1836,14 @@
 
  >>>> PRETENSION ELEMENT STATUS <<<<
  SECTION NAME     PT.NODE  --------STATUS--------------------  ----LOAD SOURCE----
-    46              20667  APPLIED PRELOAD FORCE=  1529.9      F COMMAND
-    48              20669  APPLIED PRELOAD FORCE=  2729.4      F COMMAND
-    50              20671  APPLIED PRELOAD FORCE=  1325.4      F COMMAND
-    49              20670  APPLIED PRELOAD FORCE=  2098.4      F COMMAND
-    47              20668  APPLIED PRELOAD FORCE=  3066.7      F COMMAND
-    45              20666  APPLIED PRELOAD FORCE=  4598.3      F COMMAND
+    46              20667  APPLIED PRELOAD FORCE=  3059.7      F COMMAND
+    48              20669  APPLIED PRELOAD FORCE=  1102.1      F COMMAND
+    50              20671  APPLIED PRELOAD FORCE=  2438.6      F COMMAND
+    49              20670  APPLIED PRELOAD FORCE=  3365.1      F COMMAND
+    47              20668  APPLIED PRELOAD FORCE=  3889.9      F COMMAND
+    45              20666  APPLIED PRELOAD FORCE=  2829.8      F COMMAND
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 23 and contact element type 23 has been set up.  The       
  companion pair has real constant set ID 24.  Both pairs should have     
@@ -1872,7 +1872,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Min.  Initial gap 0.108 was detected between contact element 19049 and  
  target element 19233.                                                   
  You may move entire target surface by: x= 3.850013488E-16, y= -0.108,   
@@ -1880,7 +1880,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 24 and contact element type 23 has been set up.  The       
  companion pair has real constant set ID 23.  Both pairs should have     
@@ -1909,7 +1909,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Min.  Initial gap 0.108 was detected between contact element 19124 and  
  target element 18985.                                                   
  You may move entire target surface by: x= -1.058616052E-17, y= 0.108,   
@@ -1917,7 +1917,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 27 and contact element type 27 has been set up.  The       
  companion pair has real constant set ID 28.  Both pairs should have     
@@ -1946,7 +1946,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Min.  Initial gap 0.152 was detected between contact element 19657 and  
  target element 19778.                                                   
  You may move entire target surface by: x= 0, y= -0.152, z= 0, to bring  
@@ -1954,7 +1954,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 28 and contact element type 27 has been set up.  The       
  companion pair has real constant set ID 27.  Both pairs should have     
@@ -1983,7 +1983,7 @@
  User defined pinball region PINB             0.40000    
  Contact offset is included. Initial geometric penetration is excluded.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Min.  Initial gap 0.152 was detected between contact element 19717 and  
  target element 19610.                                                   
  You may move entire target surface by: x= 0, y= 0.152, z= 0, to bring   
@@ -1991,7 +1991,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 35 and contact element type 35 has been set up.  The       
  companion pair has real constant set ID 36.  Both pairs should have     
@@ -2022,7 +2022,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.71864827 was detected between contact       
  element 20796 and target element 20841.                                 
  You may move entire target surface by : x= -0.656886197, y=             
@@ -2033,7 +2033,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 36 and contact element type 35 has been set up.  The       
  companion pair has real constant set ID 35.  Both pairs should have     
@@ -2061,7 +2061,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.903750595 was detected between contact      
  element 20813 and target element 20661.                                 
  You may move entire target surface by : x= 0.756136652, y= 0.219281942, 
@@ -2072,7 +2072,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 37 and contact element type 37 has been set up.  The       
  companion pair has real constant set ID 38.  Both pairs should have     
@@ -2103,7 +2103,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.636484745 was detected between contact      
  element 20959 and target element 21042.                                 
  You may move entire target surface by : x= 0.168295493, y=              
@@ -2114,7 +2114,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 38 and contact element type 37 has been set up.  The       
  companion pair has real constant set ID 37.  Both pairs should have     
@@ -2142,7 +2142,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.834387356 was detected between contact      
  element 21018 and target element 20884.                                 
  You may move entire target surface by : x= -0.494979344, y=             
@@ -2153,7 +2153,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 41 and contact element type 41 has been set up.  The       
  companion pair has real constant set ID 42.  Both pairs should have     
@@ -2184,7 +2184,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.683575192 was detected between contact      
  element 21358 and target element 21437.                                 
  You may move entire target surface by : x= -0.255760799, y=             
@@ -2195,7 +2195,7 @@
  ****************************************
   
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Symmetric Deformable- deformable contact pair identified by real        
  constant set 42 and contact element type 41 has been set up.  The       
  companion pair has real constant set ID 41.  Both pairs should have     
@@ -2223,7 +2223,7 @@
  Initial penetration/gap is excluded.
  Bonded contact (always) is defined.
 
- *** NOTE ***                            CP =       0.219   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.172   TIME= 19:47:14
  Max.  Initial penetration 0.714791011 was detected between contact      
  element 21414 and target element 21285.                                 
  You may move entire target surface by : x= -0.193961011, y=             
@@ -2255,7 +2255,7 @@
  *************************************************
   SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          24
 
- *** NOTE ***                            CP =       0.281   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.469   TIME= 19:47:15
  Contact pair is inactive.                                               
   
  *************************************************
@@ -2270,7 +2270,7 @@
  *************************************************
   SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          28
 
- *** NOTE ***                            CP =       0.281   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.469   TIME= 19:47:15
  Contact pair is inactive.                                               
   
  *************************************************
@@ -2300,7 +2300,7 @@
  *************************************************
   SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          36
 
- *** NOTE ***                            CP =       0.281   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.469   TIME= 19:47:15
  Contact pair is inactive.                                               
   
  *************************************************
@@ -2330,7 +2330,7 @@
  *************************************************
   SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          38
 
- *** NOTE ***                            CP =       0.281   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.469   TIME= 19:47:15
  Contact pair is inactive.                                               
   
  *************************************************
@@ -2360,7 +2360,7 @@
  *************************************************
   SUMMARY FOR CONTACT PAIR IDENTIFIED BY REAL CONSTANT SET          42
 
- *** NOTE ***                            CP =       0.281   TIME= 02:58:42
+ *** NOTE ***                            CP =       1.469   TIME= 19:47:15
  Contact pair is inactive.                                               
 
 
@@ -2408,25 +2408,25 @@
    *** ELEMENT MATRIX FORMULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
-        1       444  SOLID187      0.000   0.000000
-        2       444  SOLID187      0.000   0.000000
-        3       444  SOLID187      0.000   0.000000
-        4       444  SOLID187      0.000   0.000000
-        5       444  SOLID187      0.000   0.000000
+        1       444  SOLID187      0.031   0.000070
+        2       444  SOLID187      0.016   0.000035
+        3       444  SOLID187      0.016   0.000035
+        4       444  SOLID187      0.031   0.000070
+        5       444  SOLID187      0.016   0.000035
         6       444  SOLID187      0.000   0.000000
-        7      3510  SOLID187      0.016   0.000004
-        8      4323  SOLID187      0.047   0.000011
+        7      3510  SOLID187      0.125   0.000036
+        8      4323  SOLID187      0.141   0.000033
         9       170  CONTA174      0.000   0.000000
        10       170  TARGE170      0.000   0.000000
        11       170  CONTA174      0.000   0.000000
        12       170  TARGE170      0.000   0.000000
-       13       170  CONTA174      0.000   0.000000
+       13       170  CONTA174      0.016   0.000092
        14       170  TARGE170      0.000   0.000000
-       15       170  CONTA174      0.000   0.000000
+       15       170  CONTA174      0.016   0.000092
        16       170  TARGE170      0.000   0.000000
        17       170  CONTA174      0.000   0.000000
        18       170  TARGE170      0.000   0.000000
-       19       170  CONTA174      0.000   0.000000
+       19       170  CONTA174      0.016   0.000092
        20       170  TARGE170      0.000   0.000000
        21       145  CONTA174      0.000   0.000000
        22       145  TARGE170      0.000   0.000000
@@ -2436,15 +2436,15 @@
        26       145  TARGE170      0.000   0.000000
        27       147  CONTA174      0.000   0.000000
        28       147  TARGE170      0.000   0.000000
-       29       153  CONTA174      0.000   0.000000
+       29       153  CONTA174      0.016   0.000102
        30       153  TARGE170      0.000   0.000000
-       31       153  CONTA174      0.000   0.000000
+       31       153  CONTA174      0.016   0.000102
        32       153  TARGE170      0.000   0.000000
        33        97  CONTA174      0.000   0.000000
        34        97  TARGE170      0.000   0.000000
        35        99  CONTA174      0.000   0.000000
        36        99  TARGE170      0.000   0.000000
-       37        99  CONTA174      0.000   0.000000
+       37        99  CONTA174      0.016   0.000158
        38        99  TARGE170      0.000   0.000000
        39        97  CONTA174      0.000   0.000000
        40        97  TARGE170      0.000   0.000000
@@ -2458,11 +2458,11 @@
        48        22  PRETS179      0.000   0.000000
        49        22  PRETS179      0.000   0.000000
        50        22  PRETS179      0.000   0.000000
- Time at end of element matrix formulation CP = 0.28125.                 
+ Time at end of element matrix formulation CP = 1.46875.                 
 
  ALL CURRENT MAPDL DATA WRITTEN TO FILE NAME= file.rdb
   FOR POSSIBLE RESUME FROM THIS POINT
-     FORCE CONVERGENCE VALUE  =   6819.      CRITERION=   34.10    
+     FORCE CONVERGENCE VALUE  =   7140.      CRITERION=   35.70    
 
  DISTRIBUTED SPARSE MATRIX DIRECT SOLVER.
   Number of equations =       61677,    Maximum wavefront =    363
@@ -2475,66 +2475,62 @@
   Total memory required for in-core solution       =   280.355 MB
   Total memory required for out-of-core solution   =   132.568 MB
 
- *** NOTE ***                            CP =       0.328   TIME= 02:58:43
+ *** NOTE ***                            CP =       1.672   TIME= 19:47:15
  The Distributed Sparse Matrix Solver is currently running in the        
  in-core memory mode.  This memory mode uses the most amount of memory   
  in order to avoid using the hard drive as much as possible, which most  
  often results in the fastest solution time.  This mode is recommended   
  if enough physical memory is present to accommodate all of the solver   
  data.                                                                   
- curEqn=  14819  totEqn=  14819 Job CP sec=      0.391
-      Factor Done= 100% Factor Wall sec=      0.219 rate=      11.3 GFlops
+ curEqn=  14819  totEqn=  14819 Job CP sec=      1.875
+      Factor Done= 100% Factor Wall sec=      0.170 rate=      14.6 GFlops
  Distributed sparse solver maximum pivot= 13519521.7 at node 12486 UY.   
  Distributed sparse solver minimum pivot= 12034.3029 at node 86 UZ.      
  Distributed sparse solver minimum pivot in absolute value= 12034.3029   
  at node 86 UZ.                                                          
-     DISP CONVERGENCE VALUE   =   1.221      CRITERION=  0.6104E-01
-    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   1.221    
-     DISP CONVERGENCE VALUE   =  0.1335      CRITERION=  0.6104E-01
-     LINE SEARCH PARAMETER =  0.1094     SCALED MAX DOF INC =  0.1335    
-     FORCE CONVERGENCE VALUE  =   6231.      CRITERION=   34.10    
-    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2103    
-     DISP CONVERGENCE VALUE   =  0.8916E-01  CRITERION=  0.6104E-01
-     LINE SEARCH PARAMETER =  0.4240     SCALED MAX DOF INC =  0.8916E-01
-     FORCE CONVERGENCE VALUE  =   7116.      CRITERION=   34.10    
-    EQUIL ITER   3 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.8736E-01
-     DISP CONVERGENCE VALUE   =  0.4142E-01  CRITERION=  0.6104E-01 <<< CONVERGED
-     LINE SEARCH PARAMETER =  0.4741     SCALED MAX DOF INC =  0.4142E-01
-     FORCE CONVERGENCE VALUE  =   4046.      CRITERION=   34.11    
-    EQUIL ITER   4 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2709E-01
-     DISP CONVERGENCE VALUE   =  0.2562E-01  CRITERION=  0.6104E-01 <<< CONVERGED
-     LINE SEARCH PARAMETER =  0.9460     SCALED MAX DOF INC =  0.2562E-01
-     FORCE CONVERGENCE VALUE  =   513.9      CRITERION=   34.11    
-    EQUIL ITER   5 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.5639E-02
-     DISP CONVERGENCE VALUE   =  0.3937E-02  CRITERION=  0.6104E-01 <<< CONVERGED
-     LINE SEARCH PARAMETER =  0.6981     SCALED MAX DOF INC = -0.3937E-02
-     FORCE CONVERGENCE VALUE  =   163.2      CRITERION=   34.11    
-    EQUIL ITER   6 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1931E-02
-     DISP CONVERGENCE VALUE   =  0.1333E-02  CRITERION=  0.6104E-01 <<< CONVERGED
-     LINE SEARCH PARAMETER =  0.6907     SCALED MAX DOF INC =  0.1333E-02
-     FORCE CONVERGENCE VALUE  =   52.79      CRITERION=   34.11    
-    EQUIL ITER   7 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.6777E-03
-     DISP CONVERGENCE VALUE   =  0.4593E-03  CRITERION=  0.6104E-01 <<< CONVERGED
-     LINE SEARCH PARAMETER =  0.6777     SCALED MAX DOF INC = -0.4593E-03
-     FORCE CONVERGENCE VALUE  =   16.63      CRITERION=   40.09     <<< CONVERGED
-    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   7
+     DISP CONVERGENCE VALUE   =   1.198      CRITERION=  0.5991E-01
+    EQUIL ITER   1 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=   1.198    
+     DISP CONVERGENCE VALUE   =  0.1311      CRITERION=  0.5991E-01
+     LINE SEARCH PARAMETER =  0.1094     SCALED MAX DOF INC =  0.1311    
+     FORCE CONVERGENCE VALUE  =   6500.      CRITERION=   35.70    
+    EQUIL ITER   2 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.2562    
+     DISP CONVERGENCE VALUE   =  0.4596E-01  CRITERION=  0.5991E-01 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.1794     SCALED MAX DOF INC =  0.4596E-01
+     FORCE CONVERGENCE VALUE  =   6054.      CRITERION=   35.70    
+    EQUIL ITER   3 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.1137    
+     DISP CONVERGENCE VALUE   =  0.3424E-01  CRITERION=  0.5991E-01 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.3012     SCALED MAX DOF INC =  0.3424E-01
+     FORCE CONVERGENCE VALUE  =   5279.      CRITERION=   35.71    
+    EQUIL ITER   4 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.6351E-01
+     DISP CONVERGENCE VALUE   =  0.5757E-01  CRITERION=  0.5991E-01 <<< CONVERGED
+     LINE SEARCH PARAMETER =  0.9065     SCALED MAX DOF INC =  0.5757E-01
+     FORCE CONVERGENCE VALUE  =   1123.      CRITERION=   35.72    
+    EQUIL ITER   5 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC=  0.5194E-02
+     DISP CONVERGENCE VALUE   =  0.5194E-02  CRITERION=  0.5991E-01 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC =  0.5194E-02
+     FORCE CONVERGENCE VALUE  =   168.1      CRITERION=   35.72    
+    EQUIL ITER   6 COMPLETED.  NEW TRIANG MATRIX.  MAX DOF INC= -0.7954E-03
+     DISP CONVERGENCE VALUE   =  0.7954E-03  CRITERION=  0.5991E-01 <<< CONVERGED
+     LINE SEARCH PARAMETER =   1.000     SCALED MAX DOF INC = -0.7954E-03
+     FORCE CONVERGENCE VALUE  =   14.46      CRITERION=   35.72     <<< CONVERGED
+    >>> SOLUTION CONVERGED AFTER EQUILIBRIUM ITERATION   6
 
    *** ELEMENT RESULT CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
         1       444  SOLID187      0.000   0.000000
-        2       444  SOLID187      0.000   0.000000
-        3       444  SOLID187      0.000   0.000000
-        4       444  SOLID187      0.000   0.000000
+        2       444  SOLID187      0.016   0.000035
+        3       444  SOLID187      0.047   0.000106
+        4       444  SOLID187      0.016   0.000035
         5       444  SOLID187      0.000   0.000000
-        6       444  SOLID187      0.000   0.000000
-        7      3510  SOLID187      0.000   0.000000
-        8      4323  SOLID187      0.000   0.000000
+        6       444  SOLID187      0.016   0.000035
+        7      3510  SOLID187      0.062   0.000018
+        8      4323  SOLID187      0.172   0.000040
         9       170  CONTA174      0.000   0.000000
        11       170  CONTA174      0.000   0.000000
-       13       170  CONTA174      0.000   0.000000
+       13       170  CONTA174      0.016   0.000092
        15       170  CONTA174      0.000   0.000000
-       17       170  CONTA174      0.000   0.000000
+       17       170  CONTA174      0.016   0.000092
        19       170  CONTA174      0.000   0.000000
        21       145  CONTA174      0.000   0.000000
        23       147  CONTA174      0.016   0.000106
@@ -2545,21 +2541,21 @@
        33        97  CONTA174      0.000   0.000000
        35        99  CONTA174      0.000   0.000000
        37        99  CONTA174      0.000   0.000000
-       39        97  CONTA174      0.000   0.000000
-       41        99  CONTA174      0.000   0.000000
-       43        99  CONTA174      0.000   0.000000
+       39        97  CONTA174      0.016   0.000161
+       41        99  CONTA174      0.016   0.000158
+       43        99  CONTA174      0.016   0.000158
 
    *** NODAL LOAD CALCULATION TIMES
      TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
 
         1       444  SOLID187      0.000   0.000000
-        2       444  SOLID187      0.000   0.000000
+        2       444  SOLID187      0.016   0.000035
         3       444  SOLID187      0.000   0.000000
         4       444  SOLID187      0.000   0.000000
         5       444  SOLID187      0.000   0.000000
         6       444  SOLID187      0.000   0.000000
-        7      3510  SOLID187      0.000   0.000000
-        8      4323  SOLID187      0.000   0.000000
+        7      3510  SOLID187      0.031   0.000009
+        8      4323  SOLID187      0.016   0.000004
         9       170  CONTA174      0.000   0.000000
        11       170  CONTA174      0.000   0.000000
        13       170  CONTA174      0.000   0.000000
@@ -2578,7 +2574,7 @@
        39        97  CONTA174      0.000   0.000000
        41        99  CONTA174      0.000   0.000000
        43        99  CONTA174      0.000   0.000000
- *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      7
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      6
  *** TIME =   1.00000         TIME INC =   1.00000    
 
 
@@ -2594,20 +2590,20 @@
  ****************************************************
  *************** FINISHED SOLVE FOR LS 1 *************
 
- *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  2.98027778    
+ *GET  _WALLASOL  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.7888889    
 
  PRINTOUT RESUMED BY /GOP
 
  FINISH SOLUTION PROCESSING
 
 
- ***** ROUTINE COMPLETED *****  CP =         1.297
+ ***** ROUTINE COMPLETED *****  CP =         5.516
 
 
 
  *** MAPDL - ENGINEERING ANALYSIS SYSTEM  RELEASE 2023 R1          23.1     ***
  Ansys Mechanical Enterprise                       
- 20120530  VERSION=WINDOWS x64   02:58:49  APR 13, 2024 CP=      1.297
+ 20120530  VERSION=WINDOWS x64   19:47:20  APR 13, 2024 CP=      5.516
 
  ansys_1--____ (A5)                                                            
 
@@ -2615,7 +2611,7 @@
 
           ***** MAPDL RESULTS INTERPRETATION (POST1) *****
 
- *** NOTE ***                            CP =       1.297   TIME= 02:58:49
+ *** NOTE ***                            CP =       5.516   TIME= 19:47:20
  Reading results into the database (SET command) will update the current 
  displacement and force boundary conditions in the database with the     
  values from the results file for that load set.  Note that any          
@@ -2633,25 +2629,25 @@
  EXIT THE MAPDL POST1 DATABASE PROCESSOR
 
 
- ***** ROUTINE COMPLETED *****  CP =         1.297
+ ***** ROUTINE COMPLETED *****  CP =         5.516
 
 
 
  PRINTOUT RESUMED BY /GOP
 
- *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  2.98027778    
+ *GET  _WALLDONE  FROM  ACTI  ITEM=TIME WALL  VALUE=  19.7888889    
 
  PARAMETER _PREPTIME =     0.000000000    
 
- PARAMETER _SOLVTIME =     8.000000000    
+ PARAMETER _SOLVTIME =     6.000000000    
 
  PARAMETER _POSTTIME =     0.000000000    
 
- PARAMETER _TOTALTIM =     8.000000000    
+ PARAMETER _TOTALTIM =     6.000000000    
 
  *GET  _DLBRATIO  FROM  ACTI  ITEM=SOLU DLBR  VALUE=  1.01943780    
 
- *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.285444000E-01
+ *GET  _COMBTIME  FROM  ACTI  ITEM=SOLU COMB  VALUE= 0.266981000E-01
 
  *GET  _SSMODE   FROM  ACTI  ITEM=SOLU SSMM  VALUE=  2.00000000    
 
@@ -2668,7 +2664,7 @@
  --- Total number of nodes = 20803
  --- Total number of elements = 15629
  --- Element load balance ratio = 1.0194378
- --- Time to combine distributed files = 2.85444E-02
+ --- Time to combine distributed files = 2.66981E-02
  --- Sparse memory mode = 2
  --- Number of DOF = 61677
 
@@ -2681,7 +2677,7 @@
 +--------------------- M A P D L   S T A T I S T I C S ------------------------+
 
 Release: 2023 R1            Build: 23.1       Update: UP20221128   Platform: WINDOWS x64 
-Date Run: 04/13/2024   Time: 02:58     Process ID: 23740
+Date Run: 04/13/2024   Time: 19:47     Process ID: 17892
 Operating System: Windows 11  (Build: 22631)
 
 Processor Model: AMD Ryzen 7 5800H with Radeon Graphics
@@ -2708,38 +2704,38 @@ Input File: dummy.dat
 
   Core                Machine Name   Working Directory
  -----------------------------------------------------
-     0             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B
-     1             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B
-     2             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B
-     3             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrDC6B
+     0             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63
+     1             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63
+     2             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63
+     3             DESKTOP-V15DVLM   E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\Scr6E63
  
-Latency time from master to core     1 =    4.729 microseconds
-Latency time from master to core     2 =    4.646 microseconds
-Latency time from master to core     3 =    4.706 microseconds
+Latency time from master to core     1 =    4.195 microseconds
+Latency time from master to core     2 =    4.672 microseconds
+Latency time from master to core     3 =    4.165 microseconds
  
-Communication speed from master to core     1 =  7434.12 MB/sec
-Communication speed from master to core     2 =  8605.76 MB/sec
-Communication speed from master to core     3 =  8233.93 MB/sec
+Communication speed from master to core     1 = 11532.20 MB/sec
+Communication speed from master to core     2 = 14914.52 MB/sec
+Communication speed from master to core     3 = 13961.85 MB/sec
 
-Total CPU time for main thread                    :        1.2 seconds
-Total CPU time summed for all threads             :        1.4 seconds
+Total CPU time for main thread                    :        4.8 seconds
+Total CPU time summed for all threads             :        5.6 seconds
 
-Elapsed time spent obtaining a license            :        0.3 seconds
+Elapsed time spent obtaining a license            :        0.4 seconds
 Elapsed time spent pre-processing model (/PREP7)  :        0.2 seconds
 Elapsed time spent solution - preprocessing       :        0.4 seconds
-Elapsed time spent computing solution             :        7.7 seconds
+Elapsed time spent computing solution             :        6.0 seconds
 Elapsed time spent solution - postprocessing      :        0.0 seconds
 Elapsed time spent post-processing model (/POST1) :        0.0 seconds
  
 Equation solver used                              :            Sparse (symmetric)
-Equation solver computational rate                :       51.6 Gflops
+Equation solver computational rate                :       60.5 Gflops
 
 Sum of memory used on all processes               :      657.0 MB
 Sum of memory allocated on all processes          :     5184.0 MB
 Physical memory available                         :         15 GB
 
 Total amount of I/O written to disk               :        0.5 GB
-Total amount of I/O read from disk                :        3.5 GB
+Total amount of I/O read from disk                :        3.3 GB
 
 +------------------ E N D   M A P D L   S T A T I S T I C S -------------------+
 
@@ -2761,7 +2757,7 @@ Total amount of I/O read from disk                :        3.5 GB
  |                                                                             |
  |-----------------------------------------------------------------------------|
  |                                                                             |
- |        CP Time      (sec) =          1.359       Time  =  02:58:51          |
- |        Elapsed Time (sec) =         12.000       Date  =  04/13/2024        |
+ |        CP Time      (sec) =          5.641       Time  =  19:47:21          |
+ |        Elapsed Time (sec) =          9.000       Date  =  04/13/2024        |
  |                                                                             |
  *-----------------------------------------------------------------------------*

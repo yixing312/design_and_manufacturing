@@ -13,7 +13,7 @@
 /COM,
 ! ****** End   Custom Load Command Snippet ******
 *DIM,_wb_ProjectScratch_dir,string,248
-_wb_ProjectScratch_dir(1) = 'E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrC1D3\'
+_wb_ProjectScratch_dir(1) = 'E:\ansysFiles\design_and_manufacturing\Anays\第一稿\_ProjectScratch\ScrB72A\'
 *DIM,_wb_SolverFiles_dir,string,248
 _wb_SolverFiles_dir(1) = 'E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MECH\'
 *DIM,_wb_userfiles_dir,string,248
@@ -48719,12 +48719,12 @@ rescontrol,define,last,last,,dele	   ! Program Controlled
 /com,******************* SOLVE FOR LS 1 OF 1 ****************
 /nopr
 /gopr
-f,20666,fx,5.571
-f,20667,fx,4.929
-f,20668,fx,5.414
-f,20669,fx,4.057
-f,20670,fx,5.126
-f,20671,fx,4.454
+f,20666,fx,4749.15276054515
+f,20667,fx,1798.55980844411
+f,20668,fx,2261.49960032795
+f,20669,fx,3503.70434347045
+f,20670,fx,2998.85443945576
+f,20671,fx,3187.61810410716
 autots,on                  ! Workbench Program Controlled automatic time stepping
 nsub,1,10,1                ! due to presence of general nonlinear
 time,1.

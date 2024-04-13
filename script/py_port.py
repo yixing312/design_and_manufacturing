@@ -27,7 +27,8 @@ def write_task_queue(Task_queue):
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
         print("任务：", task_str)
         data_path = Data_path + "Ansys_data/" + task_str
-        os.makedirs(data_path)
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
     # 每个任务占据一行内容
     with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
         for task in Task_queue:
@@ -107,6 +108,16 @@ def Init_task(Bounds):
     # # !随机获取一个任务队列，数量随机
     # task_list = random_tasks([], [], Bounds)
     # # !其他初始化方法
+    # task_list = [
+    #     [
+    #         3750,
+    #         3750,
+    #         3750,
+    #         3750,
+    #         3750,
+    #         3750,
+    #     ]
+    # ]
     return task_list
 
 
@@ -142,7 +153,7 @@ if __name__ == "__main__":
     ansys_ans = []
     task_stack = []
     print_stack = []
-    epoch = 60
+    epoch = 20
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
@@ -180,13 +191,7 @@ if __name__ == "__main__":
             print_stack.append(i)
         with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
             f.write("end")
-
             break
-
-    for i in print_stack:
-        print_ansys(i)
-
-    print("任务队列已经完成！")
 
     os.mkdir(Data_path+exp_name)
     with open(Data_path + exp_name + "/task.txt", "w", encoding="utf8") as f:
@@ -196,3 +201,10 @@ if __name__ == "__main__":
     with open(Data_path + exp_name + "/ans.txt", "w", encoding="utf8") as f:
         for j in ansys_ans:
             f.write( str(j) + "\n")
+
+    for i in print_stack:
+        print_ansys(i)
+
+    print("任务队列已经完成！")
+
+    

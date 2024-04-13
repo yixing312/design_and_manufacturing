@@ -2,10 +2,10 @@
 <Storage>
   <Project Version="9.1">
     <base-designpoint-name valType="String">0</base-designpoint-name>
-    <timestamp-max valType="Int64">9120</timestamp-max>
+    <timestamp-max valType="Int64">44516</timestamp-max>
     <framework-build-version valType="String">23.1.153.0</framework-build-version>
     <external-version-string valType="String">2023 R1</external-version-string>
-    <last-saved-utc valType="String">04/12/2024 13:11:05</last-saved-utc>
+    <last-saved-utc valType="String">04/13/2024 05:36:18</last-saved-utc>
     <managed-categories valType="String">[report, misc, progress]</managed-categories>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">21671@DESKTOP-V15DVLM:C:\Users\21671\AppData\Local\Temp\WorkbenchLogs\CoreEvents356.log</ArrayEntry>
@@ -13,6 +13,7 @@
       <ArrayEntry Index="2">21671@DESKTOP-V15DVLM:C:\Users\21671\AppData\Local\Temp\WorkbenchLogs\CoreEvents15384.log</ArrayEntry>
       <ArrayEntry Index="3">21671@DESKTOP-V15DVLM:C:\Users\21671\AppData\Local\Temp\WorkbenchLogs\CoreEvents13124.log</ArrayEntry>
       <ArrayEntry Index="4">21671@DESKTOP-V15DVLM:C:\Users\21671\AppData\Local\Temp\WorkbenchLogs\CoreEvents12868.log</ArrayEntry>
+      <ArrayEntry Index="5">21671@DESKTOP-V15DVLM:C:\Users\21671\AppData\Local\Temp\WorkbenchLogs\CoreEvents17744.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -341,7 +342,7 @@
       <Object Name="/FileContainer/FileReference:F5" Version="1.0">
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F5</object-name>
-        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$e575434b-037f-4f85-af34-5b5aec9e51da, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 16}</member-data>
+        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$e575434b-037f-4f85-af34-5b5aec9e51da, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 18}</member-data>
       </Object>
       <Object Name="/FileContainer/FileReference:F6" Version="1.0">
         <class-type valType="String">FileReference</class-type>
@@ -359,7 +360,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 9101, "Input": 1496, "Output": 1496}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 9134, "Input": 1496, "Output": 1496}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/Messages/StoredMessage:Message" Version="1.0">
@@ -403,6 +404,12 @@ E:\学习材料\课程内容\大三下\设计与制造2\大作业\ANSYS\第一�
         <member-data valType="String">{"DisplayText": "Message", "MessageType": "Warning", "MessageCategory": "None", "Summary": r"""在修改完下面的项目文件之前可能无法对其进行备份：
 E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MECH\file.aapresults""", "Details": None, "Association": "", "DateTimeStamp": 04/12/2024 21:09:03, "Visibility": "Warning", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
       </Object>
+      <Object Name="/Messages/StoredMessage:Message 4" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 4</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Warning", "MessageCategory": "None", "Summary": r"""在修改完下面的项目文件之前可能无法对其进行备份：
+E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MECH\file.aapresults""", "Details": None, "Association": "", "DateTimeStamp": 04/12/2024 21:14:11, "Visibility": "Warning", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
     </Container>
     <Container Name="Parameters" Version="1.0">
       <container-type valType="String">Ansys.ParameterManager.ParameterManagerAddin:parameters</container-type>
@@ -411,7 +418,7 @@ E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MEC
       <maxUpdateOrder valType="Double">1</maxUpdateOrder>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 9119, "Input": 9120, "Output": 1499}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 44515, "Input": 44516, "Output": 1499}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Parameters/DesignPoint:0" Version="1.0">
@@ -433,7 +440,7 @@ E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MEC
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 6105, "Input": 8404, "Output": 1502}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 6105, "Input": 19715, "Output": 1502}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">true</contains-significant-data>
       <Object Name="/Schematic/System:SYS" Version="1.0">
@@ -548,7 +555,7 @@ E:\ansysFiles\design_and_manufacturing\Anays\第一稿\ansys_1_files\dp0\SYS\MEC
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 9023, "Input": 1827, "Output": 1827}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 20334, "Input": 1827, "Output": 1827}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
     </Container>

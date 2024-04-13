@@ -154,7 +154,7 @@
               <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa14" format="float">
+            <ParameterValue parameter="pa16" format="float">
               <Data>480</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">比热</Qualifier>
@@ -199,11 +199,11 @@
               <Qualifier name="Field Units">C</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr12">
+          <PropertyData property="pr11">
             <Data format="string">-</Data>
             <Qualifier name="Behavior">Isotropic</Qualifier>
             <Qualifier name="Localized Name">各向同性电阻率</Qualifier>
-            <ParameterValue parameter="pa22" format="float">
+            <ParameterValue parameter="pa19" format="float">
               <Data>7.7e-07</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">电阻率</Qualifier>
@@ -233,12 +233,12 @@
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">杨氏模量</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa15" format="float">
+            <ParameterValue parameter="pa14" format="float">
               <Data>0.31</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">泊松比</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa16" format="float">
+            <ParameterValue parameter="pa15" format="float">
               <Data>169298245614.035</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">体积模量</Qualifier>
@@ -259,23 +259,23 @@
               <Qualifier name="Field Units">C</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr13">
+          <PropertyData property="pr12">
             <Data format="string">-</Data>
             <Qualifier name="Behavior">Isotropic</Qualifier>
             <Qualifier name="Localized Name">各向同性相对磁导率</Qualifier>
-            <ParameterValue parameter="pa23" format="float">
+            <ParameterValue parameter="pa20" format="float">
               <Data>1</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">相对磁导率</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr14">
+          <PropertyData property="pr13">
             <Data format="string">-</Data>
             <Qualifier name="guid">a172f1c0-b9bf-4419-af0a-0f896f0af551</Qualifier>
             <Qualifier name="Localized Name">Material Unique Id</Qualifier>
             <Qualifier name="Display">False</Qualifier>
           </PropertyData>
-          <PropertyData property="pr15">
+          <PropertyData property="pr14">
             <Data format="string">-</Data>
             <Qualifier name="Temperature">Temperature:TEMP</Qualifier>
             <Qualifier name="Localized Name">场变量</Qualifier>
@@ -433,7 +433,7 @@
               <Qualifier name="ExtrapolationType">Projection to the Bounding Box</Qualifier>
               <Qualifier name="Localized Name">Interpolation Options</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa14" format="float">
+            <ParameterValue parameter="pa16" format="float">
               <Data>875</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">比热</Qualifier>
@@ -478,22 +478,22 @@
               <Qualifier name="Field Units">C</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr11">
+          <PropertyData property="pr15">
             <Data format="string">-</Data>
             <Qualifier name="Interpolation">Semi-Log</Qualifier>
             <Qualifier name="Field Variable Compatible">Mean Stress</Qualifier>
             <Qualifier name="Localized Name">S-N曲线</Qualifier>
-            <ParameterValue parameter="pa19" format="float">
+            <ParameterValue parameter="pa21" format="float">
               <Data>275800000,241300000,206800000,172400000,137900000,117200000,89630000,82740000,170600000,139600000,108600000,87910000,77570000,72390000,144800000,120700000,103400000,93080000,86180000,72390000,74120000,70670000,66360000,62050000</Data>
               <Qualifier name="Variable Type">Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent</Qualifier>
               <Qualifier name="Localized Name">交变应力</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa20" format="float">
+            <ParameterValue parameter="pa22" format="float">
               <Data>1700,5000,34000,140000,800000,2400000,55000000,100000000,50000,350000,3700000,14000000,50000000,100000000,50000,190000,1300000,4400000,12000000,100000000,300000,1500000,12000000,100000000</Data>
               <Qualifier name="Variable Type">Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent</Qualifier>
               <Qualifier name="Localized Name">周期</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa21" format="float">
+            <ParameterValue parameter="pa23" format="float">
               <Data>-1,-1,-1,-1,-1,-1,-1,-1,-0.5,-0.5,-0.5,-0.5,-0.5,-0.5,0,0,0,0,0,0,0.5,0.5,0.5,0.5</Data>
               <Qualifier name="Variable Type">Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent</Qualifier>
               <Qualifier name="Localized Name">R比率</Qualifier>
@@ -505,11 +505,11 @@
               </Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr12">
+          <PropertyData property="pr11">
             <Data format="string">-</Data>
             <Qualifier name="Behavior">Isotropic</Qualifier>
             <Qualifier name="Localized Name">各向同性电阻率</Qualifier>
-            <ParameterValue parameter="pa22" format="float">
+            <ParameterValue parameter="pa19" format="float">
               <Data>2.43e-08,2.67e-08,3.63e-08</Data>
               <Qualifier name="Variable Type">Dependent,Dependent,Dependent</Qualifier>
               <Qualifier name="Localized Name">电阻率</Qualifier>
@@ -539,12 +539,12 @@
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">杨氏模量</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa15" format="float">
+            <ParameterValue parameter="pa14" format="float">
               <Data>0.33</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">泊松比</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa16" format="float">
+            <ParameterValue parameter="pa15" format="float">
               <Data>69607843137.2549</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">体积模量</Qualifier>
@@ -565,23 +565,23 @@
               <Qualifier name="Field Units">C</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr13">
+          <PropertyData property="pr12">
             <Data format="string">-</Data>
             <Qualifier name="Behavior">Isotropic</Qualifier>
             <Qualifier name="Localized Name">各向同性相对磁导率</Qualifier>
-            <ParameterValue parameter="pa23" format="float">
+            <ParameterValue parameter="pa20" format="float">
               <Data>1</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">相对磁导率</Qualifier>
             </ParameterValue>
           </PropertyData>
-          <PropertyData property="pr14">
+          <PropertyData property="pr13">
             <Data format="string">-</Data>
             <Qualifier name="guid">35d48138-be0c-4a97-839b-6fba81b9f834</Qualifier>
             <Qualifier name="Localized Name">Material Unique Id</Qualifier>
             <Qualifier name="Display">False</Qualifier>
           </PropertyData>
-          <PropertyData property="pr15">
+          <PropertyData property="pr14">
             <Data format="string">-</Data>
             <Qualifier name="Temperature">Temperature:TEMP</Qualifier>
             <Qualifier name="R-Ratio">R-Ratio:</Qualifier>
@@ -661,12 +661,12 @@
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">杨氏模量</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa15" format="float">
+            <ParameterValue parameter="pa14" format="float">
               <Data>0.3</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">泊松比</Qualifier>
             </ParameterValue>
-            <ParameterValue parameter="pa16" format="float">
+            <ParameterValue parameter="pa15" format="float">
               <Data>170833333333.333</Data>
               <Qualifier name="Variable Type">Dependent</Qualifier>
               <Qualifier name="Localized Name">体积模量</Qualifier>
@@ -795,7 +795,7 @@
             </Unit>
           </Units>
         </ParameterDetails>
-        <ParameterDetails id="pa14">
+        <ParameterDetails id="pa16">
           <Name>Specific Heat</Name>
           <Units name="Specific Heat Capacity">
             <Unit>
@@ -824,22 +824,6 @@
           </Units>
         </ParameterDetails>
         <ParameterDetails id="pa19">
-          <Name>Alternating Stress</Name>
-          <Units name="Stress">
-            <Unit>
-              <Name>Pa</Name>
-            </Unit>
-          </Units>
-        </ParameterDetails>
-        <ParameterDetails id="pa20">
-          <Name>Cycles</Name>
-          <Unitless />
-        </ParameterDetails>
-        <ParameterDetails id="pa21">
-          <Name>R-Ratio</Name>
-          <Unitless />
-        </ParameterDetails>
-        <ParameterDetails id="pa22">
           <Name>Resistivity</Name>
           <Units name="Electrical Resistivity">
             <Unit>
@@ -856,8 +840,24 @@
             </Unit>
           </Units>
         </ParameterDetails>
-        <ParameterDetails id="pa23">
+        <ParameterDetails id="pa20">
           <Name>Relative Permeability</Name>
+          <Unitless />
+        </ParameterDetails>
+        <ParameterDetails id="pa21">
+          <Name>Alternating Stress</Name>
+          <Units name="Stress">
+            <Unit>
+              <Name>Pa</Name>
+            </Unit>
+          </Units>
+        </ParameterDetails>
+        <ParameterDetails id="pa22">
+          <Name>Cycles</Name>
+          <Unitless />
+        </ParameterDetails>
+        <ParameterDetails id="pa23">
+          <Name>R-Ratio</Name>
           <Unitless />
         </ParameterDetails>
         <ParameterDetails id="pa13">
@@ -868,11 +868,11 @@
             </Unit>
           </Units>
         </ParameterDetails>
-        <ParameterDetails id="pa15">
+        <ParameterDetails id="pa14">
           <Name>Poisson's Ratio</Name>
           <Unitless />
         </ParameterDetails>
-        <ParameterDetails id="pa16">
+        <ParameterDetails id="pa15">
           <Name>Bulk Modulus</Name>
           <Units name="Stress">
             <Unit>
@@ -934,23 +934,23 @@
         </PropertyDetails>
         <PropertyDetails id="pr11">
           <Unitless />
-          <Name>S-N Curve</Name>
+          <Name>Resistivity</Name>
         </PropertyDetails>
         <PropertyDetails id="pr12">
           <Unitless />
-          <Name>Resistivity</Name>
+          <Name>Relative Permeability</Name>
         </PropertyDetails>
         <PropertyDetails id="pr13">
           <Unitless />
-          <Name>Relative Permeability</Name>
+          <Name>Material Unique Id</Name>
         </PropertyDetails>
         <PropertyDetails id="pr14">
           <Unitless />
-          <Name>Material Unique Id</Name>
+          <Name>Field Variable</Name>
         </PropertyDetails>
         <PropertyDetails id="pr15">
           <Unitless />
-          <Name>Field Variable</Name>
+          <Name>S-N Curve</Name>
         </PropertyDetails>
       </Metadata>
     </MatML_Doc>
