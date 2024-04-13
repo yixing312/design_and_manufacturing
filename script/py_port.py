@@ -3,6 +3,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
+import random
 
 from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
@@ -84,6 +85,7 @@ def get_ansys(task):
         data_all[file[-6:-4]] = data
         print("读取文件：", file, "成功！")
     concentricity = get_concentricity(data_all)
+    # concentricity = random.random()
     return concentricity
 
 
@@ -99,26 +101,26 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     # # !线性插值，每次迭代生成10个任务
     # task_list = linear(Ansys_ans, Task_stack, Bounds)
     # print(task_list)
-    return task_list
+    return np.array(task_list)
 
 
 def Init_task(Bounds):
     # !随机获取一个任务，无所谓历史任务
-    task_list = random_task([], [], Bounds)
+    # task_list = random_task([], [], Bounds)
     # # !随机获取一个任务队列，数量随机
     # task_list = random_tasks([], [], Bounds)
     # # !其他初始化方法
-    # task_list = [
-    #     [
-    #         3750,
-    #         3750,
-    #         3750,
-    #         3750,
-    #         3750,
-    #         3750,
-    #     ]
-    # ]
-    return task_list
+    task_list = [
+        [
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+        ]
+    ]
+    return np.array(task_list)
 
 
 def print_ansys(task):
@@ -153,7 +155,7 @@ if __name__ == "__main__":
     ansys_ans = []
     task_stack = []
     print_stack = []
-    epoch = 20
+    epoch = 60
     while 1:
         if os.path.exists(Data_path + "task_queue.txt"):
             # print("任务队列文件存在！")
@@ -173,7 +175,7 @@ if __name__ == "__main__":
 
         # 此时空闲下来，完成绘图工作
 
-        if not task_queue:
+        if task_queue.size == 0:
             break
 
         epoch -= 1
@@ -191,20 +193,19 @@ if __name__ == "__main__":
             print_stack.append(i)
         with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
             f.write("end")
+
             break
 
-    os.mkdir(Data_path+exp_name)
+    os.mkdir(Data_path + exp_name)
     with open(Data_path + exp_name + "/task.txt", "w", encoding="utf8") as f:
         for i in task_stack:
-            f.write(str(i)  + "\n")
+            f.write(str(i) + "\n")
 
     with open(Data_path + exp_name + "/ans.txt", "w", encoding="utf8") as f:
         for j in ansys_ans:
-            f.write( str(j) + "\n")
+            f.write(str(j) + "\n")
 
-    for i in print_stack:
-        print_ansys(i)
+    # for i in print_stack:
+    #     print_ansys(i)
 
     print("任务队列已经完成！")
-
-    
