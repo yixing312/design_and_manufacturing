@@ -3,6 +3,7 @@ import time
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
+import random
 
 from get_data import get_data_list  # 读取文件并输出位列表
 from 分析同轴度 import print_all  # 读取文件并输出位列表
@@ -11,6 +12,7 @@ from plan_tasks.random_task import random_task
 from plan_tasks.random_task import random_tasks
 from plan_tasks.simulated_annealing import simulated_annealing
 from plan_tasks.gradient_descent import gradient_descent
+from plan_tasks.linearity import linear
 
 
 Data_path = "../data/"
@@ -26,7 +28,8 @@ def write_task_queue(Task_queue):
         task_str = ",".join([str(i) for i in task])  # 将任务转换为字符串]
         print("任务：", task_str)
         data_path = Data_path + "Ansys_data/" + task_str
-        os.makedirs(data_path)
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
     # 每个任务占据一行内容
     with open(Data_path + "task_queue.txt", "w", encoding="utf8") as f:
         for task in Task_queue:
@@ -65,7 +68,7 @@ def get_concentricity(data_all):
     hull = ConvexHull(points)
     hull_points3 = points[hull.vertices]
     hull_points = np.concatenate((hull_points1, hull_points2, hull_points3))
-    center = (0, 120)
+    center = (2.033, 120)
     r = np.linalg.norm(hull_points - center, axis=1)
     max_radius = np.max(r)
     min_radius = np.min(r)
@@ -82,6 +85,7 @@ def get_ansys(task):
         data_all[file[-6:-4]] = data
         print("读取文件：", file, "成功！")
     concentricity = get_concentricity(data_all)
+    # concentricity = random.random()
     return concentricity
 
 
@@ -89,21 +93,34 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     # # !随机获取一个任务，无所谓历史任务
     # task_list = random_task(Ansys_ans, Task_stack, Bounds)
     # # !随机获取一个任务队列，数量随机
-    task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
+    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
     # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
-    # task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
-    return task_list
+    task_list = gradient_descent(Ansys_ans, Task_stack, Bounds)
+    # # !线性插值，每次迭代生成10个任务
+    # task_list = linear(Ansys_ans, Task_stack, Bounds)
+    # print(task_list)
+    return np.array(task_list)
 
 
 def Init_task(Bounds):
     # !随机获取一个任务，无所谓历史任务
-    task_list = random_task([], [], Bounds)
+    # task_list = random_task([], [], Bounds)
     # # !随机获取一个任务队列，数量随机
-    task_list = random_tasks([], [], Bounds)
+    # task_list = random_tasks([], [], Bounds)
     # # !其他初始化方法
-    return task_list
+    task_list = [
+        [
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+            3750.0,
+        ]
+    ]
+    return np.array(task_list)
 
 
 def print_ansys(task):
@@ -120,15 +137,15 @@ def print_ansys(task):
 
 if __name__ == "__main__":
     # ! 扭矩边界
-    bounds = [
-        [4, 4, 4, 4, 4, 4],
-        [6, 6, 6, 6, 6, 6],
-    ]
-    # ! 施力边界
     # bounds = [
-    #     [2500, 2500, 2500, 2500, 2500, 2500],
-    #     [5000, 5000, 5000, 5000, 5000, 5000],
+    #     [4, 4, 4, 4, 4, 4],
+    #     [6, 6, 6, 6, 6, 6],
     # ]
+    # ! 施力边界
+    bounds = [
+        [1000, 1000, 1000, 1000, 1000, 1000],
+        [5000, 5000, 5000, 5000, 5000, 5000],
+    ]
     task_queue = Init_task(bounds)  # 生成任务队列
     write_task_queue(task_queue)  # 写入任务队列
 
@@ -163,7 +180,7 @@ if __name__ == "__main__":
         start_time = time.time()
         # 此时空闲下来，完成绘图工作
 
-        if not task_queue:
+        if task_queue.size == 0:
             break
 
         epoch -= 1
@@ -186,10 +203,16 @@ if __name__ == "__main__":
 
             break
 
-    for i in print_stack:
-        print_ansys(i)
+    os.mkdir(Data_path + exp_name)
+    with open(Data_path + exp_name + "/task.txt", "w", encoding="utf8") as f:
+        for i in task_stack:
+            f.write(str(i) + "\n")
+
+    with open(Data_path + exp_name + "/ans.txt", "w", encoding="utf8") as f:
+        for j in ansys_ans:
+            f.write(str(j) + "\n")
+
+    # for i in print_stack:
+    #     print_ansys(i)
 
     print("任务队列已经完成！")
-    with open(Data_path + exp_name + ".txt", "w", encoding="utf8") as f:
-        for i, j, k in zip(task_stack, ansys_ans, time_stack):
-            f.write(str(i) + " " + str(j) + " " + str(k) + "\n")

@@ -1,0 +1,12 @@
+# Ignore all .txt files
+*.txt
+
+# Ignore all .png files
+*.png
+
+*.pyc
+
+# Ignore all contents of the Ansys folder recursively
+\Ansys\*
+
+Anays\第一稿\ansys_1.wbpj

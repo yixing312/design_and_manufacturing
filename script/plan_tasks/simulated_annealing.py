@@ -1,9 +1,9 @@
 import random as rd
 import numpy as np
 
-Initial_temperature = 100
+Initial_temperature = 200
 Stop_temperature = 1
-Cooling_rate = 0.01
+Cooling_rate = 0.2
 
 current_temperature = Initial_temperature
 best_task_rank = 0
@@ -25,7 +25,7 @@ def simulated_annealing(_Ansys_ans, _Task_stack, bounds):
         return []
 
     if len(_Task_stack) == 1:
-        return new_task + np.random.rand(6) * (current_temperature**0.5)
+        return [new_task + np.random.rand(6) * (current_temperature)]
 
     # 比较上一次任务，根据接受原则决定是否接受新解，如果接受，更新当前解为新解
     # 新解尝试更新最优解
@@ -39,14 +39,17 @@ def simulated_annealing(_Ansys_ans, _Task_stack, bounds):
 
     # 在当前任务的基础上随机生成一个新任务
 
-    new_task = currect_task + np.random.randn(6) * (current_temperature**0.5)
+    new_task = currect_task + np.random.randn(6) * (current_temperature)
     new_task = np.clip(new_task, bounds[0], bounds[1])
-    new_task = [new_task]
+    # print("new_task type: ", type(new_task))
+    # task_list = []
+    # task_list.append(new_task)
+    # print("task_list type: ", type(task_list))
     # 冷却
     current_temperature *= 1 - Cooling_rate
 
     # 返回新任务
-    return new_task
+    return [new_task]
 
 
 def acceptance_probability(energy, new_energy, temperature):
