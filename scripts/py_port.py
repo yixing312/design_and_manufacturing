@@ -149,7 +149,7 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     # # !随机获取一个任务，无所谓历史任务
     # task_list = random_task(Ansys_ans, Task_stack, Bounds)
     # # !随机获取一个任务队列，数量随机
-    task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
+    # task_list = random_tasks(Ansys_ans, Task_stack, Bounds)
     # # !退火算法，每次迭代生成一个新任务
     # task_list = simulated_annealing(Ansys_ans, Task_stack, Bounds)
     # # !梯度下降法，每次迭代生成13个新任务
@@ -157,7 +157,7 @@ def plan_task(Ansys_ans, Task_stack, Bounds):
     # # !线性插值，每次迭代生成10个任务
     # task_list = linear(Ansys_ans, Task_stack, Bounds)
     # # !边界遍历，每次迭代生成64个任务
-    # task_list = bounds_traversal(Ansys_ans, Task_stack, Bounds)
+    task_list = bounds_traversal(Ansys_ans, Task_stack, Bounds)
     # # !插值遍历，当前插值数为3，生成729个任务
     # task_list = linear_interpolation([], [], Bounds)
     # print(task_list)
