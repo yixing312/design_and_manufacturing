@@ -1,51 +1,6 @@
-import wbjn
 import os
-
-model = ExtAPI.DataModel.Project.Model
-geom = model.Geometry
-mesh = model.Mesh
-connections = model.Connections
-materials = model.Materials
-analysis = model.Analyses[0]
-solution = analysis.Solution
-cmd = "returnValue(GetUserFilesDirectory())"
-user_dir = wbjn.ExecuteCommand(ExtAPI, cmd)
-
-bolt_pretension_ids = [209, 211, 213, 215, 217, 219]
-file_path = user_dir + "/test.txt"
-factors = []
-epoch = 3
-countdown = epoch
-
-
-while countdown > 0:
-    if os.path.exists(file_path):
-        count = 0
-        with open(file_path, "r") as f:
-            # input factors
-            for line in f:
-                nums = line.Split()
-                for num in nums:
-                    factors.append(num)
-            # set forces
-            for id in bolt_pretension_ids:
-                bolt_pretension = DataModel.GetObjectById(id)
-                bolt_pretension.Preload.Inputs[0].DiscreteValues = [Quantity("1[s]")]
-                bolt_pretension.Preload.Output.DiscreteValues = [
-                    Quantity(factors[count] + "[N]")
-                ]
-                count += 1
-            # calculate the solution
-            analysis.Solve()
-            for analysis in ExtAPI.DataModel.AnalysisList:
-                # Get All direction Deformation Objects in all the Analyses in the Tree
-                DirectionDeformationResults = [
-                    child
-                    for child in analysis.Solution.Children
-                    if child.DataModelObjectCategory
-                    == DataModelObjectCategory.DirectionalDeformation
-                ]import os
 import wbjn
+import time
 
 model = ExtAPI.DataModel.Project.Model
 geom = model.Geometry
@@ -58,12 +13,10 @@ cmd = "returnValue(GetUserFilesDirectory())"
 user_dir = wbjn.ExecuteCommand(ExtAPI, cmd)
 
 bolt_pretension_ids = [209, 211, 213, 215, 217, 219]
-file_path = user_dir + "/test.txt"
-# TODO 该路径与py端不一致
-# py端为 "../data/task_queue.txt"
+file_path = 'E:/ansysFiles/design_and_manufacturing/data'
+task_path = file_path + '/task_queue.txt'
 
-epoch = 2
-countdown = epoch
+endFlag = 1
 
 
 def Ansys_task(current_task):
@@ -76,7 +29,6 @@ def Ansys_task(current_task):
         bolt_pretension.Preload.Output.DiscreteValues = [
             Quantity(current_task[i] + "[N]")
         ]
-
     # calculate the solution
     analysis.Solve()
     for analysis in ExtAPI.DataModel.AnalysisList:
@@ -90,51 +42,31 @@ def Ansys_task(current_task):
         for result in DirectionDeformationResults:
             result.Activate()
             filename = (
-                user_dir
+                file_path
+                + "/Ansys_data/"
+                + ",".join([str(i) for i in current_task])
                 + "/"
                 + Model.Analyses[0].Name
-                + str(countdown)
                 + " - "
                 + result.Name
                 + ".txt"
             )
-            # TODO 该文件路径与py端不一致
-            # py端为 "../data/Ansys/" + str(task) + "/" + result.Name + ".txt"
-            # 其中 task 的每个元素为 float 类型，这里是string类型，可能需要转换一下
             result.ExportToTextFile(filename)
 
 
-while countdown > 0:
-    if os.path.exists(file_path):
-        with open(file_path, "r", encoding="utf8") as f:
-            for line in f:
-                task = line[1:-2].Split()
+while 1:
+    if os.path.exists(file_path + '/task_queue.txt'):
+        with open(file_path + '/task_queue.txt', 'r') as f:
+            # if read end then end
+            lines = f.readlines()
+            if lines[0]=="end":
+                break
+            for line in lines:
+                task = line[0:-1].Split(",")
                 Ansys_task(task)
-
-            print("Script has completed!")
-            print("The end")
         # delet the file
-        os.remove(file_path)
-        countdown -= 1
+        os.remove(file_path + '/task_queue.txt')
     else:
-        # TODO 这里建议放个一秒的延时，避免持续抢占文件权限
+        time.sleep(0.5)
         continue
-
-                for result in DirectionDeformationResults:
-                    result.Activate()
-                    filename = (
-                        user_dir
-                        + "/"
-                        + Model.Analyses[0].Name
-                        + " - "
-                        + result.Name
-                        + ".txt"
-                    )
-                    result.ExportToTextFile(filename)
-            print("Script has completed!")
-            print("The end")
-        # delet the file
-        os.remove(file_path)
-        countdown -= 1
-    else:
-        continue
+        
